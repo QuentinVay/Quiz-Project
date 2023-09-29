@@ -27,14 +27,16 @@
     <section class="home">
 
         <div class="photoHome">
-
-            <div class="AboutPhotoHome"></div>
+            <img class="photoBridgeHome" src="images\Acueil\PontsaintpierreAccueil.png"
+                alt="Magnifique photo du pont saint pierre de Toulouse">
+            <div class="aboutPhotoHome"></div>
         </div>
         <div class="welcomeHome">
-            <h1 class="titleHome"></h1>
-            <details class="detailsWelcomeHome">
-                <p></p>
-            </details>
+            <h1 class="titleHome">Bienvenu au chocoquiz de Toulouse!</h1>
+            <div class="detailsWelcomeHome">
+                <p>Découvrez le quiz exclusif qui vous permettra à la fois d'enrichir vos connaissances, de vous
+                    divertir et de déterminer si vous êtes véritablement un Toulousain authentique !</p>
+            </div>
         </div>
         <div class="rankHome">
             <div class="titleRankHome"></div>
@@ -47,10 +49,12 @@
 
         <div class="startHome">
 
-            <div class="titleStartHome"></div>
-            <div class="nameInput"></div>
+            <div class="titleStartHome">Rentre ton Pseudo!</div>
+            <div class="nameInput">
+                <input type="text" id="pseudo" name="name" required minlength="3" maxlength="24" size="24" />
+            </div>
             <div class="imgChronoStartHome"></div>
-            <button class="buttonStarHome"></button>
+            <button class="buttonStartHome">Commence le Quiz!!</button>
         </div>
     </section>
     <!-- Fin de section Home -->
@@ -67,7 +71,7 @@
             <button class="answerChoice3"></button>
             <button class="answerChoice4"></button>
         </div>
-        
+
     </section>
 
     <section class="rank">
@@ -112,7 +116,7 @@
             </Form>
         </div>
     </section>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
