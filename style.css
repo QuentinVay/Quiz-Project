@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainbackground:#FB839D;
+    --second-background:#FDC1CE;
+}
+body{
+    background-color: var(--mainbackground);
+}
