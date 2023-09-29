@@ -17,22 +17,27 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    min-width: 390px;
-    max-width: 1024px;
-    margin: auto
+    width: calc(320px + (1440 - 390) * ((100vw - 390px) / (1920 - 390)));
+    margin: auto;
+    border: 2px solid red;
 }
 .quiz1{
     display:flex;
     justify-content: center;
     flex-direction: column;
+   
 }
 .pictureQuestion{
     position: relative;
-    width: 350px;
+    width:350px
     height: 390px;
     background: white;
     margin: auto;
-
+}
+.pictureQuestion img{
+    margin: 0.5rem;
+    border-radius: 2%;
+    width: 95%;
 }
 .numberQuestion{
     position:absolute ;
@@ -41,8 +46,33 @@ body {
     height: 60px;
     width: 80px;
     border-radius: 50%;
-    background: black;
+    background: #EBE676;
+    border: 2px solid black;
 }
+.centerNumberQuestion{
+    position:absolute ;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    width: 65px;
+    height: 50px;
+    background: white;
+}
+.centerNumberQuestion p{
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    margin:  auto;
+    color: #000;
+    font-family: Mochiy Pop One;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
 .barTimeProgress{
     width: 75%;
     height: 20px;
@@ -52,11 +82,13 @@ body {
 .detailsQuestion{
     background: white;
     width: 70%;
+    max-width: 80%;
     height: 60px;
     margin: 0.3rem auto;
 }
 .quiz button{
     width: 60%;
+    max-width: 25rem;
     height: 40px;
     margin: 0.3rem auto ;
 }
