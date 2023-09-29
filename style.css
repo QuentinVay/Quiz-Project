@@ -6,6 +6,7 @@
 :root{
     --mainbackground:#FB839D;
     --second-background:#FDC1CE;
+    --last-background:#FEE3E9;
 }
 body{
     background-color: var(--mainbackground);
