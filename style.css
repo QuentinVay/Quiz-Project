@@ -1,15 +1,17 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     /* border: 2px solid red; */
 }
-:root{
-    --mainbackground:#FB839D;
-    --second-background:#FDC1CE;
-    --last-background:#FEE3E9;
+
+:root {
+    --mainbackground: #FB839D;
+    --second-background: #FDC1CE;
+    --last-background: #FEE3E9;
 }
-body{
+
+body {
     background-color: var(--mainbackground);
     display: flex;
     flex-direction: column;
@@ -17,8 +19,9 @@ body{
 
     min-width: 390px;
     max-width: 1024px;
-    margin:auto
+    margin: auto
 }
+
 .quiz1{
     display:flex;
     justify-content: center;
@@ -57,4 +60,61 @@ body{
     width: 60%;
     height: 40px;
     margin: 0.3rem auto ;
+}
+
+.bodyRank {
+    width: 360px;
+    height: 338px;
+    margin: auto;
+    background: #FDC1CE
+}
+
+.detailsRankUserName {
+    width: 232px;
+    height: 69px;
+    margin: auto;
+    background: #FEE3E9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.imgTrophy {
+    width: 236px;
+    height: 239px;
+    margin: auto;
+    background: white;
+}
+
+.playAgain {
+    width: 336px;
+    height: 47px;
+    border-radius: 20px;
+    border: 1px solid #FEAABD;
+    background: var(--Last-background, #FEE3E9);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    display: flex;
+}
+
+.rankHome {
+    width: 359px;
+    height: 240px;
+    background: var(--second-background);
+    margin: auto;
+    stroke-width: 1px;
+    stroke: #FCDCE3;
+}
+
+.titleRankHome {
+    width: 256.486px;
+    height: 30px;
+    margin: auto;
+    background: var(--last-background);
+}
+
+.bodyRankHome {
+    width: 300.192px;
+    height: 182px;
+    margin: auto;
+    background: var(--last-background);
+    
 }
