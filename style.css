@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 2px solid red; */
 }
 :root{
     --mainbackground:#FB839D;
@@ -10,4 +11,16 @@
 }
 body{
     background-color: var(--mainbackground);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 390px;
+    max-width: 1024px;
+    margin:auto
+}
+.pictureQuestion{
+    width: 350px;
+    height: 390px;
+    background: white;
+    margin: auto;
 }
