@@ -16,16 +16,50 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 390px;
+
+    min-width: 390px;
     max-width: 1024px;
     margin: auto
 }
 
-.pictureQuestion {
+.quiz1{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pictureQuestion{
+    position: relative;
     width: 350px;
     height: 390px;
     background: white;
     margin: auto;
+
+}
+.numberQuestion{
+    position:absolute ;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60px;
+    width: 80px;
+    border-radius: 50%;
+    background: black;
+}
+.barTimeProgress{
+    width: 75%;
+    height: 20px;
+    margin: 0.5rem auto;
+    background: rgb(235, 221, 31);
+}
+.detailsQuestion{
+    background: white;
+    width: 70%;
+    height: 60px;
+    margin: 0.3rem auto;
+}
+.quiz button{
+    width: 60%;
+    height: 40px;
+    margin: 0.3rem auto ;
 }
 
 .bodyRank {
