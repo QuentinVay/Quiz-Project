@@ -14,6 +14,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     min-width: 390px;
     max-width: 1024px;
     margin:auto
@@ -29,6 +30,7 @@ body{
     height: 390px;
     background: white;
     margin: auto;
+
 }
 .numberQuestion{
     position:absolute ;
