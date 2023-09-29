@@ -16,17 +16,66 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 390px;
+
+    min-width: 390px;
     max-width: 1024px;
     margin: auto
 }
-
-.pictureQuestion {
+.quiz1{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.pictureQuestion{
+    position: relative;
     width: 350px;
     height: 390px;
     background: white;
     margin: auto;
+
 }
+.numberQuestion{
+    position:absolute ;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60px;
+    width: 80px;
+    border-radius: 50%;
+    background: black;
+}
+.barTimeProgress{
+    width: 75%;
+    height: 20px;
+    margin: 0.5rem auto;
+    background: rgb(235, 221, 31);
+}
+.detailsQuestion{
+    background: white;
+    width: 70%;
+    height: 60px;
+    margin: 0.3rem auto;
+}
+.quiz button{
+    width: 60%;
+    height: 40px;
+    margin: 0.3rem auto ;
+}
+
+.bodyRank {
+    width: 360px;
+    height: 338px;
+    margin: auto;
+    background: #FDC1CE
+}
+
+.detailsRankUserName {
+    width: 232px;
+    height: 69px;
+    margin: auto;
+    background: #FEE3E9;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 
 .photoBridgeHome {
     max-width: 500px;
@@ -59,4 +108,45 @@ body {
     background-color: #FEE3E9;
     margin-bottom: 5px;
 
+
+.imgTrophy {
+    width: 236px;
+    height: 239px;
+    margin: auto;
+    background: white;
+}
+
+.playAgain {
+    width: 336px;
+    height: 47px;
+    border-radius: 20px;
+    border: 1px solid #FEAABD;
+    background: var(--Last-background, #FEE3E9);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    display: flex;
+}
+
+.rankHome {
+    width: 359px;
+    height: 240px;
+    background: var(--second-background);
+    margin: auto;
+    stroke-width: 1px;
+    stroke: #FCDCE3;
+}
+
+.titleRankHome {
+    width: 256.486px;
+    height: 30px;
+    margin: auto;
+    background: var(--last-background);
+}
+
+.bodyRankHome {
+    width: 300.192px;
+    height: 182px;
+    margin: auto;
+    background: var(--last-background);
+    
 }
