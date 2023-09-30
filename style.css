@@ -15,27 +15,33 @@ body {
     background-color: var(--mainbackground);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    min-width: 390px;
+    align-items: center;
+    width: 100%;
     max-width: 1440px;
-    margin: auto;
 }
 .quiz1{
     display:flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    width: 360px;
 }
 .pictureQuestion{
     position: relative;
-    width:350px;
-    height: 390px;
+    min-width: 350px;
+    width: 80%;
+    height:412px;
     background: white;
-    margin: auto;
+    padding-top: 10px;
 }
-.pictureQuestion img{
-    margin: 0.5rem;
-    border-radius: 2%;
-    width: 95%;
+.pictureQuestion .img{
+    margin:auto;
+    width: 97%;
+    height: 95%;
+    background-image: url('/images/Quiz/quiz1desktop.jfif');
+    background-position: -1.765px -42.961px;
+    background-size: 100% 162%;
+    background-repeat: no-repeat;    
+    border-radius: 10px;
 }
 .numberQuestion{
     position:absolute ;
@@ -72,23 +78,43 @@ body {
 }
 
 .barTimeProgress{
-    width: 75%;
+    width: 95%;
     height: 20px;
-    margin: 0.5rem auto;
-    background: rgb(235, 221, 31);
+    margin-top: 0.2rem;
+    border-radius: 5px;
+    background: #111;
 }
 .detailsQuestion{
-    background: white;
-    width: 70%;
-    max-width: 80%;
+    width: 95%;
+    max-width: 550px;
     height: 60px;
-    margin: 0.3rem auto;
+    margin: 0.3rem 0;
+    display: flex;
+    padding-left: 0.3rem;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: #FFF;
 }
 .quiz button{
+    display: flex;
+    align-items: center;
+    justify-content: left;
     width: 60%;
     max-width: 25rem;
     height: 40px;
-    margin: 0.3rem auto ;
+    margin: 0.3rem 0 ;
+    padding-left: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
 }
 
 .bodyRank {
