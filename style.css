@@ -16,20 +16,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    width: calc(320px + (1440 - 390) * ((100vw - 390px) / (1920 - 390)));
+    min-width: 390px;
+    max-width: 1440px;
     margin: auto;
-    border: 2px solid red;
 }
 .quiz1{
     display:flex;
     justify-content: center;
     flex-direction: column;
-   
 }
 .pictureQuestion{
     position: relative;
-    width:350px
+    width:350px;
     height: 390px;
     background: white;
     margin: auto;
@@ -51,7 +49,7 @@ body {
 }
 .centerNumberQuestion{
     position:absolute ;
-    top: 5%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%);
     border-radius: 50%;
@@ -60,7 +58,7 @@ body {
     background: white;
 }
 .centerNumberQuestion p{
-    top: -5%;
+    top: -8%;
     left: 50%;
     transform: translate(-50%);
     position: absolute;
