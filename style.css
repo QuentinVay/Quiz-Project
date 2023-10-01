@@ -19,42 +19,47 @@ body {
     width: 100%;
     max-width: 1440px;
 }
-.quiz1{
-    display:flex;
+
+.quiz1 {
+    display: flex;
     align-items: center;
     flex-direction: column;
     width: 360px;
 }
-.pictureQuestion{
+
+.pictureQuestion {
     position: relative;
     min-width: 350px;
     width: 80%;
-    height:412px;
+    height: 412px;
     background: white;
     padding-top: 10px;
 }
-.pictureQuestion .img{
-    margin:auto;
+
+.pictureQuestion .img {
+    margin: auto;
     width: 97%;
     height: 95%;
     background-image: url('/images/Quiz/quiz1desktop.jfif');
     background-position: -1.765px -42.961px;
     background-size: 100% 162%;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     border-radius: 10px;
 }
-.numberQuestion{
-    position:absolute ;
+
+.numberQuestion {
+    position: absolute;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 60px;
     width: 80px;
     border-radius: 50%;
     background: #EBE676;
     border: 2px solid black;
 }
-.centerNumberQuestion{
-    position:absolute ;
+
+.centerNumberQuestion {
+    position: absolute;
     top: 6%;
     left: 50%;
     transform: translate(-50%);
@@ -63,12 +68,13 @@ body {
     height: 50px;
     background: white;
 }
-.centerNumberQuestion p{
+
+.centerNumberQuestion p {
     top: -8%;
     left: 50%;
     transform: translate(-50%);
     position: absolute;
-    margin:  auto;
+    margin: auto;
     color: #000;
     font-family: Mochiy Pop One;
     font-size: 40px;
@@ -77,7 +83,7 @@ body {
     line-height: normal;
 }
 
-.barTimeProgress{
+.barTimeProgress {
     position: relative;
     width: 350px;
     height: 20px;
@@ -85,10 +91,11 @@ body {
     border-radius: 6px;
     background: #111;
 }
-.imgTopTimeProgress{
+
+.imgTopTimeProgress {
     position: absolute;
     left: 2px;
-    top:2px;
+    top: 2px;
     width: 345px;
     height: 10px;
     flex-shrink: 0;
@@ -96,7 +103,8 @@ body {
     background: #EBE676;
     z-index: 1;
 }
-.imgBottonTimeProgress{
+
+.imgBottonTimeProgress {
     position: absolute;
     left: 2px;
     bottom: 2px;
@@ -106,7 +114,8 @@ body {
     border-radius: 3px;
     background: #DEBE6B;
 }
-.detailsQuestion{
+
+.detailsQuestion {
     width: 95%;
     max-width: 550px;
     height: 60px;
@@ -118,14 +127,15 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: #FFF;
 }
-.quiz button{
+
+.quiz button {
     display: flex;
     align-items: center;
     justify-content: left;
     width: 70%;
     max-width: 25rem;
     height: 40px;
-    margin: 0.3rem 0 ;
+    margin: 0.3rem 0;
     padding-left: 0.5rem;
     border: none;
     border-radius: 10px;
@@ -156,10 +166,9 @@ body {
 
 
 .photoBridgeHome {
+    display: block;
+    margin: auto;
     max-width: 500px;
-    margin: 0;
-    padding: 0;
-
 }
 
 .startHome {
@@ -176,6 +185,9 @@ body {
     text-align: center;
     background-color: #FEE3E9;
     border-radius: 5px;
+    margin-top: -10px;
+    padding-block: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .buttonStartHome {
@@ -226,5 +238,5 @@ body {
     height: 182px;
     margin: auto;
     background: var(--last-background);
-    
+
 }
