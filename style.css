@@ -177,8 +177,11 @@ body {
     background-color: #FDC1CE;
     border-radius: 10px;
     justify-content: center;
-    margin-inline: 12px;
+    max-width: 360px;
+    margin: auto;
     margin-block: 24px;
+    margin-bottom: 30px;
+    height: 265px;
 }
 
 .titleStartHome {
@@ -191,12 +194,19 @@ body {
 }
 
 .buttonStartHome {
-    width: 309;
+    width: 309px;
     height: 73px;
     border-radius: 40px;
     border: 3px solid #FB839D;
     background-color: #FEE3E9;
-    margin-bottom: 5px;
+    margin-bottom: 27px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 23px;
+    font-style: normal;
+    line-height: normal;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .imgTrophy {
