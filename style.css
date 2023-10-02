@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 1440px;
+
 }
 
 .quiz1 {
@@ -127,15 +127,14 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: #FFF;
 }
-
-.quiz button {
+.quiz button{
     display: flex;
     align-items: center;
     justify-content: left;
     width: 70%;
     max-width: 25rem;
     height: 40px;
-    margin: 0.3rem 0;
+    margin: 0.3rem 0 ;
     padding-left: 0.5rem;
     border: none;
     border-radius: 10px;
@@ -166,10 +165,9 @@ body {
 
 
 .photoBridgeHome {
+    display: block;
+    margin: auto;
     max-width: 500px;
-    margin: 0;
-    padding: 0;
-
 }
 
 .startHome {
@@ -186,6 +184,9 @@ body {
     text-align: center;
     background-color: #FEE3E9;
     border-radius: 5px;
+    margin-top: -10px;
+    padding-block: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .buttonStartHome {
@@ -211,8 +212,11 @@ body {
     border: 1px solid #FEAABD;
     background: var(--Last-background, #FEE3E9);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: auto;
-    display: flex;
+    margin: 8px;
+    display: grid;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .rankHome {
@@ -222,13 +226,23 @@ body {
     margin: auto;
     stroke-width: 1px;
     stroke: #FCDCE3;
+    display: grid;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .titleRankHome {
+    display: flex;
+    justify-content: center;
     width: 256.486px;
     height: 30px;
     margin: auto;
     background: var(--last-background);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .bodyRankHome {
@@ -236,12 +250,53 @@ body {
     height: 182px;
     margin: auto;
     background: var(--last-background);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 
+.titleShare {
+    text-align: center;
+    font-size: 25px;
+    margin: 8px;
 }
 
 .containLogoReseaux {
     width: 369px;
     height: 60px;
     display: flex;
-    background: white;
+    justify-content: space-around;
+    background: var(--mainbackground);
+    margin-bottom: 50px;
+}
+
+.facebook {
+    width: 66px;
+    height: 66px;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+}
+
+.twitter {
+    width: 66px;
+    height: 66px;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+}
+
+.instagram {
+    width: 66px;
+    height: 66px;
+    background: blue;
+    border-radius: 50%;
+    display: flex;
+}
+
+.whatsapps {
+    width: 66px;
+    height: 66px;
+    background: green;
+    border-radius: 50%;
+    display: flex;
 }
