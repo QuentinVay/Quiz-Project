@@ -127,14 +127,15 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: #FFF;
 }
-.quiz button{
+
+.quiz button {
     display: flex;
     align-items: center;
     justify-content: left;
     width: 70%;
     max-width: 25rem;
     height: 40px;
-    margin: 0.3rem 0 ;
+    margin: 0.3rem 0;
     padding-left: 0.5rem;
     border: none;
     border-radius: 10px;
@@ -205,6 +206,11 @@ body {
     background: white;
 }
 
+.buttonPlay {
+    display: flex;
+    justify-content: center;
+}
+
 .playAgain {
     width: 336px;
     height: 47px;
@@ -213,10 +219,9 @@ body {
     background: var(--Last-background, #FEE3E9);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin: 8px;
-    display: grid;
-    align-items: center;
     font-size: 25px;
     font-weight: bold;
+
 }
 
 .rankHome {
@@ -254,6 +259,50 @@ body {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.rankOne {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankOne {
+    margin: 10px;
+}
+
+.rankTwo {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankTwo {
+    margin: 10px;
+}
+
+.rankThree {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankThree {
+    margin: 10px;
+}
+
+.rankFour {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .titleShare {
     text-align: center;
     font-size: 25px;
@@ -272,7 +321,6 @@ body {
 .facebook {
     width: 66px;
     height: 66px;
-    background: red;
     border-radius: 50%;
     display: flex;
 }
@@ -280,7 +328,6 @@ body {
 .twitter {
     width: 66px;
     height: 66px;
-    background: black;
     border-radius: 50%;
     display: flex;
 }
@@ -288,7 +335,6 @@ body {
 .instagram {
     width: 66px;
     height: 66px;
-    background: blue;
     border-radius: 50%;
     display: flex;
 }
@@ -296,7 +342,6 @@ body {
 .whatsapps {
     width: 66px;
     height: 66px;
-    background: green;
     border-radius: 50%;
     display: flex;
 }
