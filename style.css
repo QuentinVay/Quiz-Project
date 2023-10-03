@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    }
+}
 
 .quiz1 {
     display: flex;
@@ -270,6 +270,12 @@ body {
          animation-name: slidein;
          animation-iteration-count: 1;
 }
+
+.buttonPlay {
+    display: flex;
+    justify-content: center;
+}
+
 .playAgain {
     width: 336px;
     height: 47px;
@@ -277,24 +283,36 @@ body {
     border: 1px solid #FEAABD;
     background: var(--Last-background, #FEE3E9);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: auto;
-    display: flex;
+    margin: 8px;
+    font-size: 25px;
+    font-weight: bold;
+
 }
 
 .rankHome {
-    width: 359px;
+    width: 369px;
     height: 240px;
     background: var(--second-background);
     margin: auto;
     stroke-width: 1px;
     stroke: #FCDCE3;
+    display: grid;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .titleRankHome {
+    display: flex;
+    justify-content: center;
     width: 256.486px;
     height: 30px;
     margin: auto;
     background: var(--last-background);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .bodyRankHome {
@@ -302,6 +320,97 @@ body {
     height: 182px;
     margin: auto;
     background: var(--last-background);
+
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rankOne {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankOne {
+    margin: 10px;
+}
+
+.rankTwo {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankTwo {
+    margin: 10px;
+}
+
+.rankThree {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankThree {
+    margin: 10px;
+}
+
+.rankFour {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleShare {
+    text-align: center;
+    font-size: 25px;
+    margin: 8px;
+}
+
+.containLogoReseaux {
+    width: 369px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    background: var(--mainbackground);
+    margin-bottom: 50px;
+}
+
+.facebook {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.twitter {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.instagram {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.whatsapps {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+
 }
 @keyframes slidein {
     from{
@@ -313,4 +422,5 @@ body {
     to {
         top:100%;
     }
+
 }
