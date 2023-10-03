@@ -2,7 +2,6 @@
 const body = document.querySelector(".bodyRank");
 let marginLeft;
 
-
 function createElement() {
   const elementLeft = document.createElement("div");
   elementLeft.className = "chocolatine";
