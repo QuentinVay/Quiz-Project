@@ -10,7 +10,8 @@
     --second-background: #FDC1CE;
     --last-background: #FEE3E9;
     --shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-} 
+}
+
 body {
     background-color: var(--mainbackground);
     display: flex;
@@ -171,10 +172,48 @@ body {
     z-index: 99;
 }
 
+.listNavBar {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.logoHome {
+    position: absolute;
+    border-radius: 100px;
+    opacity: 0.6;
+    width: 3%;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
 .photoBridgeHome {
     display: block;
     margin: auto;
     max-width: 390px;
+}
+
+.aboutPhotoHome {
+    position: absolute;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    width: 18px;
+    top: 120px;
+    margin-left: 10px;
+}
+
+.aboutPhotoHomea {
+    display: none;
+    top: 80px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    font-size: 8px;
+    width: 80px;
+}
+.visible {
+    display: block;
 }
 
 .welcomeHome {
@@ -199,7 +238,7 @@ body {
 .startHome {
     display: grid;
     grid-gap: 10px;
-    background-color: #FDC1CE;
+    background-color: var(--second-background);
     border-radius: 10px;
     justify-content: center;
     max-width: 360px;
@@ -211,30 +250,34 @@ body {
 
 .titleStartHome {
     text-align: center;
-    background-color: #FEE3E9;
+    background-color: var(--last-background);
     border-radius: 5px;
     margin-top: -10px;
     padding-block: 6px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     max-height: 40px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 22px;
 }
 
 #pseudo {
     margin-inline: 15px;
-    margin-bottom: 15px;
     margin-top: 15px;
-    padding-block: 12px;
+    padding-block: 14px;
     padding-inline: 5px;
     border-radius: 5px;
-    border: 4px solid var(--Last-background, #FEE3E9);
+    border: 4px solid var(--Last-background);
     background: rgba(255, 255, 255, 0.55);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
 }
 
 .imgChrono {
-
+    position: absolute;
     padding-block: 10px;
     padding-inline: 5px;
+
 
 }
 
@@ -242,9 +285,9 @@ body {
     width: 309px;
     height: 73px;
     border-radius: 40px;
-    border: 3px solid #FB839D;
-    background-color: #FEE3E9;
-    margin-bottom: 1px;
+    border: 3px solid var(--mainbackground);
+    background-color: var(--last-background);
+    margin-bottom: 27px;
     color: #000;
     text-align: center;
     font-family: Inter;
@@ -263,16 +306,17 @@ body {
     background-size: cover;
     z-index: 2;
 }
-.chocolatine{
-         position: absolute;
-         height: 20px;
-         width: 33px;
-         background:url("/images/Rank/Chocolatine.png");
-         background-size: contain;
-         animation-duration: 6s;
-         animation-name: slidein;
-         animation-iteration-count: 1;
-         transition: opacity 1s;
+
+.chocolatine {
+    position: absolute;
+    height: 20px;
+    width: 33px;
+    background: url("/images/Rank/Chocolatine.png");
+    background-size: contain;
+    animation-duration: 6s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    transition: opacity 1s;
 }
 
 .buttonPlay {
@@ -415,15 +459,18 @@ body {
     display: flex;
 
 }
+
 @keyframes slidein {
-    from{
-        top:0;
+    from {
+        top: 0;
     }
+
     50% {
         opacity: 0.9;
     }
+
     to {
-        top:95%;
+        top: 95%;
         opacity: 0;
     }
 
