@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    }
+}
 
 .quiz1 {
     display: flex;
@@ -174,7 +174,26 @@ body {
 .photoBridgeHome {
     display: block;
     margin: auto;
-    max-width: 500px;
+    max-width: 390px;
+}
+
+.welcomeHome {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    margin-left: 15px;
+}
+
+.titleHome {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+}
+
+.detailsWelcomeHome {
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
 }
 
 .startHome {
@@ -183,8 +202,11 @@ body {
     background-color: #FDC1CE;
     border-radius: 10px;
     justify-content: center;
-    margin-inline: 12px;
+    max-width: 360px;
+    margin: auto;
     margin-block: 24px;
+    margin-bottom: 30px;
+    height: 265px;
 }
 
 .titleStartHome {
@@ -194,15 +216,42 @@ body {
     margin-top: -10px;
     padding-block: 6px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    max-height: 40px;
+}
+
+#pseudo {
+    margin-inline: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-block: 12px;
+    padding-inline: 5px;
+    border-radius: 5px;
+    border: 4px solid var(--Last-background, #FEE3E9);
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.imgChrono {
+
+    padding-block: 10px;
+    padding-inline: 5px;
+
 }
 
 .buttonStartHome {
-    width: 309;
+    width: 309px;
     height: 73px;
     border-radius: 40px;
     border: 3px solid #FB839D;
     background-color: #FEE3E9;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 23px;
+    font-style: normal;
+    line-height: normal;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .imgTrophy {
@@ -225,6 +274,12 @@ body {
          animation-iteration-count: 1;
          transition: opacity 1s;
 }
+
+.buttonPlay {
+    display: flex;
+    justify-content: center;
+}
+
 .playAgain {
     width: 336px;
     height: 47px;
@@ -232,25 +287,35 @@ body {
     border: 1px solid #FEAABD;
     background: var(--Last-background, #FEE3E9);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: auto;
-    display: flex;
-    z-index: 99;
+    margin: 8px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .rankHome {
-    width: 359px;
+    width: 369px;
     height: 240px;
     background: var(--second-background);
     margin: auto;
     stroke-width: 1px;
     stroke: #FCDCE3;
+    display: grid;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .titleRankHome {
+    display: flex;
+    justify-content: center;
     width: 256.486px;
     height: 30px;
     margin: auto;
     background: var(--last-background);
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .bodyRankHome {
@@ -258,6 +323,97 @@ body {
     height: 182px;
     margin: auto;
     background: var(--last-background);
+
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rankOne {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankOne {
+    margin: 10px;
+}
+
+.rankTwo {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankTwo {
+    margin: 10px;
+}
+
+.rankThree {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textRankThree {
+    margin: 10px;
+}
+
+.rankFour {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleShare {
+    text-align: center;
+    font-size: 25px;
+    margin: 8px;
+}
+
+.containLogoReseaux {
+    width: 369px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    background: var(--mainbackground);
+    margin-bottom: 50px;
+}
+
+.facebook {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.twitter {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.instagram {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.whatsapps {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    display: flex;
+
 }
 @keyframes slidein {
     from{
@@ -270,4 +426,5 @@ body {
         top:95%;
         opacity: 0;
     }
+
 }

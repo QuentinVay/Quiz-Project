@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChocoQuiz de Toulouse</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -42,11 +42,28 @@
             </div>
         </div>
         <div class="rankHome">
-            <div class="titleRankHome"></div>
+            <div class="titleRankHome">
+                <p>CLASSEMENT</p>
+            </div>
             <div class="bodyRankHome">
-                <div class="rankOne"></div>
-                <div class="rankTwo"></div>
-                <div class="rankThree"></div>
+                <div class="rankOne">
+                    <img src="images/Acueil/image-goldMedaille.png" alt="Médaille d'or classement">
+                    <div class="textRankOne">
+                        <p>Marcelobgdu31: 1000 pts</p>
+                    </div>
+                </div>
+                <div class="rankTwo">
+                    <img src="images/Acueil/image-SylverMedaille.png" alt="Médaille d'argent classement">
+                    <div class="textRankTwo">
+                        <p>xXxAdrienxXx: 999 pts</p>
+                    </div>
+                </div>
+                <div class="rankThree">
+                    <img src="images/Acueil/image-BronzeMedaille.png" alt="Médaille de bronze classement">
+                    <div class="textRankThree">
+                        <p>Quentin: 998 pts</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -55,6 +72,7 @@
             <div class="titleStartHome">Rentre ton Pseudo!</div>
             <div class="nameInput">
                 <input type="text" id="pseudo" name="name" required minlength="3" maxlength="24" size="24" />
+                <img class="imgChrono" src="/images/Acueil/Chronometre.png">
             </div>
             <div class="imgChronoStartHome"></div>
             <button class="buttonStartHome">Commence le Quiz!!</button>
@@ -65,14 +83,19 @@
     <section class="quiz">
         <div class="quiz1">
             <div class="pictureQuestion">
-                <div class="numberQuestion"><div class="centerNumberQuestion"><p>1</p></div></div>
+                <div class="numberQuestion">
+                    <div class="centerNumberQuestion">
+                        <p>1</p>
+                    </div>
+                </div>
                 <div class="img"></div>
             </div>
             <div class="barTimeProgress">
                 <div class="imgTopTimeProgress"></div>
                 <div class="imgBottonTimeProgress"></div>
             </div>
-            <div class="detailsQuestion">Quel célèbre monument se trouve au cœur de Toulouse et est souvent surnommé "le Capitole" ?</div>
+            <div class="detailsQuestion">Quel célèbre monument se trouve au cœur de Toulouse et est souvent surnommé "le
+                Capitole" ?</div>
             <button class="answerChoice1">A) La Basilique Saint-Sernin</button>
             <button class="answerChoice2">B) Le Pont Neuf</button>
             <button class="answerChoice3">C) L'Hôtel de Ville</button>
@@ -88,25 +111,53 @@
             </div>
             <div class="imgTrophy"></div>
         </div>
-        <button class="playAgain">Retente ta chance !</button>
+        <div class="buttonPlay">
+            <button class="playAgain">Retente ta chance !</button>
+        </div>
         <div class="rankHome">
-            <div class="titleRankHome"></div>
+            <div class="titleRankHome">
+                <p>CLASSEMENT</p>
+            </div>
             <div class="bodyRankHome">
-                <div class="rankOne"></div>
-                <div class="rankTwo"></div>
-                <div class="rankThree"></div>
+                <div class="rankOne">
+                    <img src="images/Acueil/image-goldMedaille.png" alt="Médaille d'or classement">
+                    <div class="textRankOne">
+                        <p>Marcelobgdu31: 1000 pts</p>
+                    </div>
+                </div>
+                <div class="rankTwo">
+                    <img src="images/Acueil/image-SylverMedaille.png" alt="Médaille d'argent classement">
+                    <div class="textRankTwo">
+                        <p>xXxAdrienxXx: 999 pts</p>
+                    </div>
+                </div>
+                <div class="rankThree">
+                    <img src="images/Acueil/image-BronzeMedaille.png" alt="Médaille de bronze classement">
+                    <div class="textRankThree">
+                        <p>Quentin: 998 pts</p>
+                    </div>
+                </div>
+                <div class="rankFour"></div>
             </div>
         </div>
         <div class="challengeFriends">
             <div class="titleShare">
-                <h3>Challenge tes amies</h3>
+                <h3>CHALLENGE TES AMIES !</h3>
             </div>
 
             <div class="containLogoReseaux">
-                <div class="facebook"></div>
-                <div class="twitter"></div>
-                <div class="instagram"></div>
-                <div class="whatsapps"></div>
+                <div class="facebook">
+                    <img src="images/Rank/facebook.png" alt="Icone partage facebook">
+                </div>
+                <div class="twitter">
+                    <img src="images/Rank/twitter.png" alt="Icone partage twitter">
+                </div>
+                <div class="instagram">
+                    <img src="images/Rank/instagram.png" alt="Icone partage instagram">
+                </div>
+                <div class="whatsapps">
+                    <img src="images/Rank/whatsapp.png" alt="icone partage whatsapps">
+                </div>
             </div>
         </div>
     </section>
