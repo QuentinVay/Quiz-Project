@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 360px;
+    margin-bottom: 2rem;
 }
 
 .pictureQuestion {
@@ -35,12 +36,13 @@ body {
     padding-top: 10px;
     box-shadow: var(--shadow);
 }
-
-.pictureQuestion .img {
-    margin: auto;
+.pictureQuestion .img{
+    display: flex;
+    justify-content: center;
+}
+.pictureQuestion img {
     width: 97%;
     height: 95%;
-    background-image: url('/images/Quiz/quiz1desktop.jfif');
     background-position: -1.765px -42.961px;
     background-size: 100% 162%;
     background-repeat: no-repeat;
@@ -87,7 +89,7 @@ body {
     position: relative;
     width: 350px;
     height: 20px;
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
     border-radius: 6px;
     background: #111;
 }
@@ -119,7 +121,7 @@ body {
     width: 95%;
     max-width: 550px;
     height: 60px;
-    margin: 0.3rem 0;
+    margin: 0.5rem 0;
     display: flex;
     padding-left: 0.3rem;
     align-items: center;
@@ -153,7 +155,7 @@ body {
     position: relative;
     width: 360px;
     height: 338px;
-    margin: auto;
+    margin: auto ;
     background: #FDC1CE;
     border-radius: 10px;
 }
@@ -315,7 +317,6 @@ body {
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
 
 .bodyRankHome {
@@ -323,7 +324,6 @@ body {
     height: 182px;
     margin: auto;
     background: var(--last-background);
-
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
