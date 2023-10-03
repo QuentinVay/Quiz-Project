@@ -10,13 +10,26 @@
     --second-background: #FDC1CE;
     --last-background: #FEE3E9;
     --shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-} 
+}
+
 body {
     background-color: var(--mainbackground);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.quiz {
+    display: block;
+}
+
+.rank {
+    display: block;
+}
+
+.quiz.visible {
+    display: block;
 }
 
 .quiz1 {
@@ -263,16 +276,17 @@ body {
     background-size: cover;
     z-index: 2;
 }
-.chocolatine{
-         position: absolute;
-         height: 20px;
-         width: 33px;
-         background:url("/images/Rank/Chocolatine.png");
-         background-size: contain;
-         animation-duration: 6s;
-         animation-name: slidein;
-         animation-iteration-count: 1;
-         transition: opacity 1s;
+
+.chocolatine {
+    position: absolute;
+    height: 20px;
+    width: 33px;
+    background: url("/images/Rank/Chocolatine.png");
+    background-size: contain;
+    animation-duration: 6s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    transition: opacity 1s;
 }
 
 .buttonPlay {
@@ -290,10 +304,11 @@ body {
     margin: 8px;
     font-size: 25px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .rankHome {
-    width: 369px;
+    width: 360px;
     height: 240px;
     background: var(--second-background);
     margin: auto;
@@ -323,7 +338,6 @@ body {
     height: 182px;
     margin: auto;
     background: var(--last-background);
-
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -384,7 +398,7 @@ body {
     display: flex;
     justify-content: space-around;
     background: var(--mainbackground);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .facebook {
@@ -415,15 +429,87 @@ body {
     display: flex;
 
 }
+
+/* Styles pour la section de contact */
+.contact {
+    background-color: var(--mainbackground);
+    padding: 20px;
+    text-align: left;
+}
+
+.contactForm {
+    background-color: var(--second-background);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    width: 360px;
+    margin: 0 auto;
+    height: 613px;
+    font-size: 22px;
+}
+
+.titleContact {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.contactForm input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 3px solid #FCDCE3;
+    background: var(--last-background);
+
+}
+
+.contactForm .inputMessage {
+    height: 230px;
+    padding: 10px;
+    vertical-align: top;
+    width: 100%;
+    border-radius: 5px;
+    border: 3px solid #FCDCE3;
+    background: var(--last-background);
+    resize: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.centerButton {
+    text-align: center;
+}
+
+.contactForm button {
+    width: 274px;
+    height: 47px;
+    text-align: center;
+    border-radius: 20px;
+    border: 2px solid #FCDCE3;
+    background: var(--last-background);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
+
 @keyframes slidein {
-    from{
-        top:0;
+    from {
+        top: 0;
     }
+
     50% {
         opacity: 0.9;
     }
+
     to {
-        top:95%;
+        top: 95%;
         opacity: 0;
     }
 
