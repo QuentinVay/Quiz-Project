@@ -19,16 +19,8 @@ body {
     width: 100%;
 }
 
-.quiz {
-    display: none;
-}
-
 .rank {
     display: none;
-}
-
-.quiz.visible {
-    display: block;
 }
 
 .quiz1 {
