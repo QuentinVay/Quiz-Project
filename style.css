@@ -292,23 +292,39 @@ a {
     color: black;
 }
 
+.listNavBar {
+    background-color: var(--last-background);
+    padding-bottom: 17px;
+    padding-inline: 12px;
+    width: 325px;
+    margin-left: -20px;
+    z-index: 2;
+}
+
 .navBarHidden {
     display: none;
     height: 0px;
-    padding-bottom: px;
-    margin-top : -20px,
-    
+    position: fixed;
+    margin-left: -150px;
+    z-index: 2;
+
+
 }
+
 .visible {
     display: block;
 }
 
 .burgermenu {
-    margin-left: 145px;
-    position: absolute;
+    margin-left: 150px;
+    position: fixed;
+    z-index: 2;
 }
+
 .tester {
-    margin-left:  295px;
+    margin-left: 150px;
+    background-color: var(--last-background);
+    height: 36px;
 }
 
 .burgermenu span {
