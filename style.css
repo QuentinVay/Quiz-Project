@@ -791,6 +791,31 @@ a {
         width: 115px;
     }
 
+    .pictureQuestion {
+        width: 900px;
+        height: 436px;
+
+
+    }
+
+    .pictureQuestion img {
+        max-height: 412px;
+    }
+
+    .detailsQuestion {
+        width: 100%;
+        padding-block: 20px;
+    }
+
+    .quiz1 {
+        width: 100%;
+        margin-left: 60px;
+    }
+
+    .numberQuestion {
+        left: 1%
+    }
+
 
 
 
