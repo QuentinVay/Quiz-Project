@@ -132,7 +132,8 @@ body {
     border-radius: 3px;
     background: #DEBE6B;
 }
-.imgVideTimeProgress{
+
+.imgVideTimeProgress {
     position: absolute;
     right: 2px;
     bottom: 2px;
@@ -345,9 +346,9 @@ a {
 
 .imgShame {
     width: 346px;
-    height: 246px;
+    height: 270px;
     margin: auto;
-    margin-top: 2.5rem;
+    margin-top: 10px;
     background: url('images/Rank/PhotodelaHonte.png');
     background-size: cover;
     z-index: 2;
@@ -585,10 +586,6 @@ a {
     font-weight: bold;
 }
 
-
-
-
-
 @keyframes slidein {
     from {
         top: 0;
@@ -609,3 +606,4 @@ a {
         opacity: 1;
     }
 }
+
