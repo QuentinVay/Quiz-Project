@@ -132,6 +132,16 @@ body {
     border-radius: 3px;
     background: #DEBE6B;
 }
+.imgVideTimeProgress{
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    width: 50%;
+    height: 16px;
+    border-radius: 3px;
+    background: white;
+    z-index: 3;
+}
 
 .detailsQuestion {
     width: 95%;
