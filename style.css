@@ -671,7 +671,7 @@ a {
 }
 
 @media screen and (min-width : 1280px) {
-   
+
     .navBarFloatting {
         display: flex;
         align-items: normal;
@@ -710,6 +710,7 @@ a {
         z-index: 3;
         position: fixed;
         margin-top: -10px;
+        max-width: 50px;
     }
 
     .titleHome,
@@ -753,8 +754,8 @@ a {
 
     .mascotte {
         display: block;
-        height: 85px;
-        opacity: 0.5;
+        height: 100px;
+        opacity: 0.9;
         position: absolute;
         left: 3%;
         margin-top: 150px;
@@ -764,11 +765,11 @@ a {
 
     .drapeau {
         display: block;
-        height: 85px;
-        opacity: 0.3;
+        height: 100px;
+        opacity: 0.9;
         position: absolute;
         left: 2%;
-        margin-top: 20px;
+        margin-top: 15px;
 
     }
 
