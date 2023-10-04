@@ -132,7 +132,8 @@ body {
     border-radius: 3px;
     background: #DEBE6B;
 }
-.imgVideTimeProgress{
+
+.imgVideTimeProgress {
     position: absolute;
     right: 2px;
     bottom: 2px;
@@ -211,8 +212,10 @@ body {
     border-radius: 100px;
     opacity: 0.6;
     width: 3%;
+    min-width: 25px;
     margin-top: 4px;
     margin-left: 4px;
+
 }
 
 .photoBridgeHome {
@@ -333,6 +336,7 @@ a {
     margin-left: 150px;
     position: fixed;
     z-index: 3;
+
 }
 
 .tester {
@@ -366,8 +370,11 @@ a {
     position: absolute;
     padding-block: 10px;
     padding-inline: 5px;
+}
 
-
+.mascotte,
+.drapeau {
+    display: none;
 }
 
 .buttonStartHome {
@@ -664,8 +671,12 @@ a {
 }
 
 @media screen and (min-width : 1280px) {
-    body {
+   
+    .navBarFloatting {
+        display: flex;
         align-items: normal;
+        width: 1280px;
+
     }
 
     .photoBridgeHome {
@@ -722,8 +733,8 @@ a {
 
     .aboutPhotoHomea {
         display: block;
-        width: 280px;
-        height: 180px;
+        width: 310px;
+        height: 150px;
         font-size: 24px;
         top: 180px;
         right: 5%;
@@ -734,9 +745,30 @@ a {
         display: flex;
         align-items: center;
         flex-direction: column;
-        height: 100%;
+        height: 295px;
         width: 600px;
         margin-inline: 20px;
+
+    }
+
+    .mascotte {
+        display: block;
+        height: 85px;
+        opacity: 0.5;
+        position: absolute;
+        left: 3%;
+        margin-top: 150px;
+        z-index: 2;
+
+    }
+
+    .drapeau {
+        display: block;
+        height: 85px;
+        opacity: 0.3;
+        position: absolute;
+        left: 2%;
+        margin-top: 20px;
 
     }
 
@@ -753,6 +785,10 @@ a {
         box-shadow: none;
     }
 
+    .imgChrono {
+        height: 115px;
+        width: 115px;
+    }
 
 
 
