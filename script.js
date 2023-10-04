@@ -3,10 +3,12 @@ import questionsVariees from "./questions.js";
 const body = document.querySelector(".bodyRank");
 let marginLeft;
 let nombrepoints = 0;
-
+let nameUser;
 const startQuiz = document.querySelector('.buttonStartHome');
 startQuiz.addEventListener('click', ()=>{
   // Demarrage du quiz init temps à 60s chronometre
+ nameUser= document.getElementById('pseudo').value;
+  console.log(nameUser);
   startChronometre(tempsTimer);
   selectquestionquiz(questionsVariees);
 })
@@ -144,10 +146,9 @@ function selectquestionquiz(tableauquestion) {
     // affichage page classements
     const affichageRank = document.getElementById('rankSelection');
     const affichageScoreRank = document.querySelector('.detailsRankUserName');
-    affichageScoreRank.innerHTML=`<p>Félicitations Marcelo tu fais partie de la team chocolatine ! ton score est de :${nombrepoints}</p> `
+    affichageScoreRank.innerHTML=`<p>Félicitations ${nameUser} tu fais partie de la team chocolatine ! ton score est de :${nombrepoints}</p> `
     affichageRank.classList.toggle("visible");
     affichageRank.scrollIntoView();
-
   }
 }
 
