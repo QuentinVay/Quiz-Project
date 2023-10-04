@@ -21,7 +21,7 @@
             <ul class="listNavBar">
                 <li class="home"><a href="#home">Acceuil</a></li>
                 <!-- <li class="quiz"></li> -->
-                <li class="contact"><a href="#contactUs">Contact</a></li>
+                <li class="contact"><a href="#contactSelection">Contact</a></li>
             </ul>
             <div class="burgerNavBarClose"></div>
         </nav>
@@ -85,7 +85,7 @@
     </section>
     <!-- Fin de section Home -->
 
-    <section class="quiz">
+    <section class="quiz" id="quizSection">
         <div class="quiz1">
             <div class="pictureQuestion">
                 <div class="numberQuestion">
@@ -93,7 +93,9 @@
                         <p>1</p>
                     </div>
                 </div>
-                <div class="img"></div>
+                <div class="img">
+                    <img src="./images/Quiz/Photo1.png" alt="">
+                </div>
             </div>
             <div class="barTimeProgress">
                 <div class="imgTopTimeProgress"></div>
@@ -106,10 +108,30 @@
             <button class="answerChoice3">C) L'Hôtel de Ville</button>
             <button class="answerChoice4">D) Le Musée des Augustins</button>
         </div>
-
+        <div class="quiz1">
+            <div class="pictureQuestion">
+                <div class="numberQuestion">
+                    <div class="centerNumberQuestion">
+                        <p>2</p>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="./images/Quiz/Photo2.png" alt="">
+                </div>
+            </div>
+            <div class="barTimeProgress">
+                <div class="imgTopTimeProgress"></div>
+                <div class="imgBottonTimeProgress"></div>
+            </div>
+            <div class="detailsQuestion">Quelle grande entreprise aéronautique est implantée à Toulouse ? </div>
+            <button class="answerChoice1">A) Boeing</button>
+            <button class="answerChoice2">B) Airbus</button>
+            <button class="answerChoice3">C) Airplane</button>
+            <button class="answerChoice4">D) Bombardier</button>
+        </div>
     </section>
 
-    <section class="rank">
+    <section class="rank" id="rankSelection">
         <div class="bodyRank">
             <div class="detailsRankUserName">
                 <p>Félicitations “username”tu fais partie de la team chocolatine ! ton score est de : “score”</p>
@@ -117,7 +139,7 @@
             <div class="imgTrophy"></div>
         </div>
         <div class="buttonPlay">
-            <button class="playAgain">Retente ta chance !</button>
+            <button class="playAgain" id="playAgainButton">Retente ta chance !</button>
         </div>
         <div class="rankHome">
             <div class="titleRankHome">
@@ -142,7 +164,9 @@
                         <p>Quentin: 998 pts</p>
                     </div>
                 </div>
-                <div class="rankFour"></div>
+                <div class="rankFour">
+                    <p>User name : x pts</p>
+                </div>
             </div>
         </div>
         <div class="challengeFriends">
@@ -167,17 +191,25 @@
         </div>
     </section>
 
-    <section class="contactUs" id="contactUs">
+    <section class="contact" id="contactSelection">
         <div class="contactForm">
-            <div class="titleContact"></div>
+            <div class="titleContact">
+                <p>Nous contacter</p>
+            </div>
             <Form>
+                <p>Prenom</p>
                 <label for="" class="firstName"></label>
                 <input type="text" class="inputFirstName">
+                <p>Nom</p>
                 <label for="" class="lastName"></label>
                 <input type="text" class="inputLastName">
-                <label for="" class="MessageContactUs"></label>
-                <input type="text" class="inputMessage">
-                <button class="buttonSendContactUs"></button>
+                <p>Message</p>
+                <label for="" class="MessageContact"></label>
+                <textarea class="inputMessage" name="message" id="message" required></textarea>
+                <div class="centerButton">
+                    <button class="SendContact" id="buttonSendContact">Envoyer</button>
+                </div>
+
             </Form>
         </div>
     </section>

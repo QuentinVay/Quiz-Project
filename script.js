@@ -35,3 +35,10 @@ const aboutLq = document.querySelector('.aboutPhotoHomea')
 aboutQ.addEventListener('click', function () {
   aboutLq.classList.toggle("visible")
 })
+const playAgainButton = document.getElementById("playAgainButton");
+const quizSection = document.getElementById("quizSection");
+
+playAgainButton.addEventListener("click", function () {
+  // Affichez la section quiz quand on clique sur "retente ta chance".
+  quizSection.classList.add("visible");
+});
