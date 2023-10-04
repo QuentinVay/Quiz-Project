@@ -261,17 +261,26 @@ body {
     font-size: 15px;
 }
 
+.bas {
+    display: grid;
+    grid-gap: 18px;
+}
+
 .startHome {
     display: grid;
     grid-gap: 10px;
     background-color: var(--second-background);
     border-radius: 10px;
     justify-content: center;
-    max-width: 360px;
+    width: 360px;
     margin: auto;
     margin-block: 24px;
     margin-bottom: 30px;
     height: 265px;
+}
+
+.textHidden {
+    display: none;
 }
 
 .titleStartHome {
@@ -623,33 +632,96 @@ a {
 }
 
 @media screen and (min-width : 1280px) {
-body {
-    align-items: normal;
-}
+    body {
+        align-items: normal;
+    }
+
     .photoBridgeHome {
+        margin-top: 15px;
         max-width: 1280px;
         width: 1280px;
     }
-    .listNavBar{
+
+    .listNavBar {
         width: 1280px;
-        max-width:100% ;
+        max-width: 100%;
         margin-left: 0px;
         padding-inline: 25%;
         padding-block: 12px;
 
+
     }
+
     .burgermenu {
         margin-left: 1200px;
         display: none;
     }
+
     .navBarHidden {
         margin-left: 0px;
+        display: block;
 
     }
+
     .logoHome {
         z-index: 3;
         position: fixed;
+        margin-top: -10px;
     }
+
+    .titleHome,
+    .detailsWelcomeHome {
+        display: none;
+    }
+
+    .bas {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 1280;
+    }
+
+    .textHidden {
+        display: block;
+    }
+
+    .aboutPhotoHome {
+        display: none;
+    }
+
+    .aboutPhotoHomea {
+        display: block;
+        width: 280px;
+        height: 180px;
+        font-size: 24px;
+        top: 180px;
+        right: 5%;
+    }
+
+    .startHome {
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 600px;
+        margin-inline: 20px;
+
+    }
+
+    .textHidden h1 {
+        text-align: center;
+    }
+
+    .textHidden p {
+        margin-left: 8px;
+    }
+
+    .titleStartHome {
+        background-color: var(--second-background);
+        box-shadow: none;
+    }
+
+
 
 
 }
