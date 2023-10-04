@@ -6,6 +6,7 @@ let marginLeft;
 function createElement() {
   const elementLeft = document.createElement("div");
   elementLeft.className = "chocolatine";
+
   marginLeft = Math.random() * 50;
   elementLeft.style.marginLeft = marginLeft + "%";
   elementLeft.style.animationDuration = Math.random() * 4 + 3 + "s";
@@ -14,7 +15,8 @@ function createElement() {
   elementRight.className = "chocolatine";
   marginLeft = Math.max(Math.random() * 60 + 20, 30);
   elementRight.style.marginLeft = marginLeft + "%";
-  elementRight.style.animationDuration = Math.random() * 4 + 3 + "s";
+  elementRight.style.animationDuration = Math.random() * 4 + 3 + 's';
+
 
   body.appendChild(elementLeft);
   body.appendChild(elementRight);
@@ -30,6 +32,7 @@ function createElement() {
     elementRight.remove();
   }, 3000);
 }
+
 setInterval(createElement, 600);
 
 let compteur;
@@ -114,4 +117,21 @@ setTimeout(() => {
 }, 5000);
 
 // compter le nombre de points
+
+
+setInterval(createElement, 700);
+
+let aboutQ = document.querySelector('.aboutPhotoHome');
+const aboutLq = document.querySelector('.aboutPhotoHomea')
+
+aboutQ.addEventListener('click', function () {
+  aboutLq.classList.toggle("visible")
+})
+const playAgainButton = document.getElementById("playAgainButton");
+const quizSection = document.getElementById("quizSection");
+
+playAgainButton.addEventListener("click", function () {
+  // Affichez la section quiz quand on clique sur "retente ta chance".
+  quizSection.classList.add("visible");
+});
 
