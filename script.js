@@ -1,43 +1,83 @@
 import questionsVariees from "./questions.js";
 
 const body = document.querySelector(".bodyRank");
+const imgTrophy = document.querySelector(".imgTrophy");
+const imgShame = document.querySelector(".imgShame");
 let marginLeft;
+let nombrepoints = 120;
 
-function createElement() {
-  const elementLeft = document.createElement("div");
-  elementLeft.className = "chocolatine";
+if (nombrepoints >= 100) {
+  imgTrophy.style.display = "block";
+  imgShame.style.display = "none";
+  function createElementChoco() {
+    const elementLeft = document.createElement("div");
+    elementLeft.className = "chocolatine";
 
-  marginLeft = Math.random() * 50;
-  elementLeft.style.marginLeft = marginLeft + "%";
-  elementLeft.style.animationDuration = Math.random() * 4 + 3 + "s";
+    marginLeft = Math.random() * 50;
+    elementLeft.style.marginLeft = marginLeft + "%";
+    elementLeft.style.animationDuration = Math.random() * 4 + 3 + "s";
 
-  const elementRight = document.createElement("div");
-  elementRight.className = "chocolatine";
-  marginLeft = Math.max(Math.random() * 60 + 20, 30);
-  elementRight.style.marginLeft = marginLeft + "%";
-  elementRight.style.animationDuration = Math.random() * 4 + 3 + 's';
+    const elementRight = document.createElement("div");
+    elementRight.className = "chocolatine";
+    marginLeft = Math.max(Math.random() * 60 + 20, 30);
+    elementRight.style.marginLeft = marginLeft + "%";
+    elementRight.style.animationDuration = Math.random() * 4 + 3 + 's';
 
+    body.appendChild(elementLeft);
+    body.appendChild(elementRight);
 
-  body.appendChild(elementLeft);
-  body.appendChild(elementRight);
+    elementLeft.addEventListener("click", function () {
+      elementLeft.remove();
+    });
+    elementRight.addEventListener("click", function () {
+      elementRight.remove();
+    });
+    setTimeout(function () {
+      elementLeft.remove();
+      elementRight.remove();
+    }, 3000);
+  }
+  setInterval(createElementChoco, 600);
 
-  elementLeft.addEventListener("click", function () {
-    elementLeft.remove();
-  });
-  elementRight.addEventListener("click", function () {
-    elementRight.remove();
-  });
-  setTimeout(function () {
-    elementLeft.remove();
-    elementRight.remove();
-  }, 3000);
+} else {
+
+  imgTrophy.style.display = "none";
+  imgShame.style.display = "block";
+  function createElementShame() {
+    const elementLeft = document.createElement("div");
+    elementLeft.className = "painchocolat";
+
+    marginLeft = Math.random() * 50;
+    elementLeft.style.marginLeft = marginLeft + "%";
+    elementLeft.style.animationDuration = Math.random() * 4 + 3 + "s";
+
+    const elementRight = document.createElement("div");
+    elementRight.className = "painchocolat";
+    marginLeft = Math.max(Math.random() * 60 + 20, 30);
+    elementRight.style.marginLeft = marginLeft + "%";
+    elementRight.style.animationDuration = Math.random() * 4 + 3 + 's';
+
+    body.appendChild(elementLeft);
+    body.appendChild(elementRight);
+
+    elementLeft.addEventListener("click", function () {
+      elementLeft.remove();
+    });
+    elementRight.addEventListener("click", function () {
+      elementRight.remove();
+    });
+    setTimeout(function () {
+      elementLeft.remove();
+      elementRight.remove();
+    }, 3000);
+  }
+  setInterval(createElementShame, 600);
 }
-
-setInterval(createElement, 600);
 
 let compteur;
 let index = 0;
 function generateRandomAnswer(quention, choices, correctAnswer, fact) {
+
   compteur = index;
   index++;
   const bodySectionQuiz = document.querySelector(".bodyquiz");
@@ -80,11 +120,14 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       })
       // verifier la réponse de lutilisateur avec la bonne réponse de la question
       // selon résultat contour rouge ou vert sur la réponse de lutilisateur
+      // compter le nombre de points
       if (choices[buttonIndex] === correctAnswer) {
         element.style.border = "4px solid green";
+        nombrepoints += 10;
       } else {
         element.style.border = "4px solid red";
       }
+      console.log(nombrepoints);
       // attendre 3s appel function selectionner question
       setTimeout(() => {
         selectquestionquiz(questionsVariees);
@@ -93,36 +136,49 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
     });
   });
 }
-// Demarrage du quiz init temps à 60s chronometre
-let temps = 60;
-// vérifier si il reste encore du temps sinon afficher la page classement avec nombre de points réalisé
-if (temps >= 0) {
-  // call function
-} else {
-  // affichage page classements
-}
-// function selectionner une question aléatoirement dans un tableau
 
+// Demarrage du quiz init temps à 60s chronometre
+let tempsTimer = 30;
+function startchronometre(temps) {
+  setTimeout(() => {
+    clearInterval(timeprogress);
+  }, 30000);
+  let timeprogress = setInterval(() => {
+    temps--;
+    console.log(temps);
+  }, 1000,);
+  return temps;
+};
+let tempsRestant = startchronometre(tempsTimer);
+
+// function selectionner une question aléatoirement dans un tableau
 function selectquestionquiz(tableauquestion) {
-  let randomIndex = Math.floor(Math.random() * tableauquestion.length);
-  const { question, choices, correctAnswer, fact } =
-    tableauquestion[randomIndex];
-  // afficher la question, stocker la bonne reponse dans une variable
-  generateRandomAnswer(question, choices, correctAnswer, fact);
-  // supprimer la question du tableau afin de ne pas repeter la question
-  tableauquestion.splice(randomIndex, 1);
+  // vérifier si il reste encore du temps sinon afficher la page classement avec nombre de points réalisé
+  console.log(tempsRestant);
+  if (tempsRestant >= 0) {
+    let randomIndex = Math.floor(Math.random() * tableauquestion.length);
+    const { question, choices, correctAnswer, fact } =
+      tableauquestion[randomIndex];
+    // afficher la question, stocker la bonne reponse dans une variable
+    generateRandomAnswer(question, choices, correctAnswer, fact);
+    // supprimer la question du tableau afin de ne pas repeter la question
+    tableauquestion.splice(randomIndex, 1);
+  } else {
+    // affichage page classements
+    const affichageRank = document.getElementById('rankSelection');
+    affichageRank.scrollIntoView();
+  }
 }
 // setTimeout(() => {
 //   selectquestionquiz(questionsVariees);
 // }, 5000);
 
-// compter le nombre de points
 
 
-setInterval(createElement, 700);
+
 
 let aboutQ = document.querySelector('.aboutPhotoHome');
-const aboutLq = document.querySelector('.aboutPhotoHomea')
+const aboutLq = document.querySelector('.aboutPhotoHomea');
 
 aboutQ.addEventListener('click', function () {
   aboutLq.classList.toggle("visible")
@@ -141,8 +197,8 @@ const rankFourElement = document.querySelector(".rankFour");
 const pseudoInput = document.getElementById("pseudo");
 
 pseudoInput.addEventListener("input", function () {
-  // Met à jour le texte de l'élément "rankFour" avec la valeur de l'input "pseudo"
-  rankFourElement.textContent = `${pseudoInput.value}: pts`;
+  // Met à jour le texte de l'élément "rankFour" avec la valeur de l'input "pseudo" et la valeur de la variable "nombrepoints"
+  rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
 });
 
 // Bloquer le bouton "Envoyer" tant que tout les champs ne sont pas remplis"

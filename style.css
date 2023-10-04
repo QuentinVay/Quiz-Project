@@ -341,11 +341,33 @@ a {
     z-index: 2;
 }
 
+.imgShame {
+    width: 346px;
+    height: 246px;
+    margin: auto;
+    margin-top: 2.5rem;
+    background: url('images/Rank/PhotodelaHonte.png');
+    background-size: cover;
+    z-index: 2;
+}
+
 .chocolatine {
     position: absolute;
     height: 20px;
     width: 33px;
     background: url("/images/Rank/Chocolatine.png");
+    background-size: contain;
+    animation-duration: 6s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    transition: opacity 1s;
+}
+
+.painchocolat {
+    position: absolute;
+    height: 30px;
+    width: 37px;
+    background: url("/images/Rank/Painauchocolat.png");
     background-size: contain;
     animation-duration: 6s;
     animation-name: slidein;
