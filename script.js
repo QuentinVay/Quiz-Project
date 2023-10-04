@@ -134,6 +134,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       })
       // verifier la réponse de lutilisateur avec la bonne réponse de la question
       // selon résultat contour rouge ou vert sur la réponse de lutilisateur
+
       // compter le nombre de points
       if (choices[buttonIndex] === correctAnswer) {
         element.style.border = "4px solid green";
@@ -142,6 +143,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
         element.style.border = "4px solid red";
       }
       console.log(nombrepoints);
+
       // attendre 3s appel function selectionner question
       setTimeout(() => {
         selectquestionquiz(questionsVariees);
@@ -149,7 +151,9 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
 
     });
   });
+
   };
+
 
 
 
@@ -175,6 +179,7 @@ function startChronometre(temps) {
 
 // function selectionner une question aléatoirement dans un tableau
 function selectquestionquiz(tableauquestion) {
+
   // vérifier si il reste encore du temps sinon afficher la page classement avec nombre de points réalisé
 
   if (tempsTimer!==0){
@@ -213,6 +218,7 @@ playAgainButton.addEventListener("click", function () {
 });
 
 
+
 const rankFourElement = document.querySelector(".rankFour");
 const pseudoInput = document.getElementById("pseudo");
 
@@ -245,5 +251,3 @@ function toggleSendButtonState() {
 
 // Désactivez initialement le bouton "Envoyer" au chargement de la page
 sendButton.disabled = true;
-
-
