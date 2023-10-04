@@ -29,6 +29,12 @@ function createElement() {
 }
 setInterval(createElement, 700);
 
+let aboutQ = document.querySelector('.aboutPhotoHome');
+const aboutLq = document.querySelector('.aboutPhotoHomea')
+
+aboutQ.addEventListener('click', function () {
+  aboutLq.classList.toggle("visible")
+})
 const playAgainButton = document.getElementById("playAgainButton");
 const quizSection = document.getElementById("quizSection");
 
