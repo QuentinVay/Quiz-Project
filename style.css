@@ -4,7 +4,6 @@
     box-sizing: border-box;
     /* border: 2px solid red; */
 }
-
 :root {
     --mainbackground: #FB839D;
     --second-background: #FDC1CE;
@@ -26,7 +25,10 @@ body {
     width: 360px;
     margin-bottom: 2rem;
 }
-
+.slidequiz{
+ opacity: 0;
+ animation: slidequiz 1.5s 500ms 1 forwards;
+}
 .pictureQuestion {
     position: relative;
     min-width: 350px;
@@ -130,7 +132,7 @@ body {
     background: #FFF;
 }
 
-.quiz button {
+.bodyquiz button {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -426,5 +428,9 @@ body {
         top:95%;
         opacity: 0;
     }
-
+}
+@keyframes slidequiz {
+    100% {
+        opacity: 1;
+    }
 }
