@@ -4,16 +4,18 @@ const body = document.querySelector(".bodyRank");
 const imgTrophy = document.querySelector(".imgTrophy");
 const imgShame = document.querySelector(".imgShame");
 let marginLeft;
-
-let nombrepoints = 0;
+let tempsTimer = 60;
+let timeprogress;
+let nombrepoints = 130;
 let nameUser;
+
 const startQuiz = document.querySelector('.buttonStartHome');
 startQuiz.addEventListener('click', ()=>{
   // Demarrage du quiz init temps à 60s chronometre
  nameUser= document.getElementById('pseudo').value;
   startChronometre(tempsTimer);
   selectquestionquiz(questionsVariees);
-})
+});
 
 if (nombrepoints >= 100) {
   imgTrophy.style.display = "block";
@@ -34,7 +36,7 @@ if (nombrepoints >= 100) {
 
     body.appendChild(elementLeft);
     body.appendChild(elementRight);
-
+    
     elementLeft.addEventListener("click", function () {
       elementLeft.remove();
     });
@@ -147,11 +149,9 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
 
     });
   });
+  };
 
-});
-};
-let tempsTimer = 60;
-let timeprogress;
+
 
 function startChronometre(temps) {
   clearInterval(timeprogress); 
@@ -171,7 +171,7 @@ function startChronometre(temps) {
   }, 60000);
 
   return timeprogress;
-}
+};
 
 // function selectionner une question aléatoirement dans un tableau
 function selectquestionquiz(tableauquestion) {
