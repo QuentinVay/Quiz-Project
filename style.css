@@ -20,19 +20,11 @@ body {
     width: 100%;
 }
 
-.quiz {
-    display: block;
-}
-
 .rank {
     display: block;
 }
 
 .contact {
-    display: block;
-}
-
-.quiz.visible {
     display: block;
 }
 

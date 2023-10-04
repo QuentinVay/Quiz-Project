@@ -4,7 +4,8 @@ const body = document.querySelector(".bodyRank");
 const imgTrophy = document.querySelector(".imgTrophy");
 const imgShame = document.querySelector(".imgShame");
 let marginLeft;
-let nombrepoints = 120;
+
+let nombrepoints = 0;
 
 if (nombrepoints >= 100) {
   imgTrophy.style.display = "block";
@@ -135,27 +136,41 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
 
     });
   });
-}
 
-// Demarrage du quiz init temps à 60s chronometre
-let tempsTimer = 30;
-function startchronometre(temps) {
+});
+};
+let tempsTimer = 60;
+let timeprogress;
+
+function startChronometre(temps) {
+  clearInterval(timeprogress); 
+
+  timeprogress = setInterval(() => {
+    temps--;
+    if (temps === 0) {
+      clearInterval(timeprogress); 
+      tempsTimer = 0;
+    }
+  }, 1000);
+
   setTimeout(() => {
     clearInterval(timeprogress);
-  }, 30000);
-  let timeprogress = setInterval(() => {
-    temps--;
-    console.log(temps);
-  }, 1000,);
-  return temps;
-};
-let tempsRestant = startchronometre(tempsTimer);
+    tempsTimer = 0;
+  }, 60000);
+
+  return timeprogress;
+}
+
+
+
+
 
 // function selectionner une question aléatoirement dans un tableau
 function selectquestionquiz(tableauquestion) {
   // vérifier si il reste encore du temps sinon afficher la page classement avec nombre de points réalisé
-  console.log(tempsRestant);
-  if (tempsRestant >= 0) {
+
+  if (tempsTimer!==0){
+
     let randomIndex = Math.floor(Math.random() * tableauquestion.length);
     const { question, choices, correctAnswer, fact } =
       tableauquestion[randomIndex];
@@ -166,15 +181,12 @@ function selectquestionquiz(tableauquestion) {
   } else {
     // affichage page classements
     const affichageRank = document.getElementById('rankSelection');
+    const affichageScoreRank = document.querySelector('.detailsRankUserName');
+    affichageScoreRank.innerHTML=`<p>Félicitations ${nameUser} tu fais partie de la team chocolatine ! ton score est de :${nombrepoints}</p> `
+    affichageRank.classList.toggle("visible");
     affichageRank.scrollIntoView();
   }
 }
-// setTimeout(() => {
-//   selectquestionquiz(questionsVariees);
-// }, 5000);
-
-
-
 
 
 let aboutQ = document.querySelector('.aboutPhotoHome');
