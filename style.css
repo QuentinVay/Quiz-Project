@@ -4,6 +4,7 @@
     box-sizing: border-box;
     /* border: 2px solid red; */
 }
+
 :root {
     --mainbackground: #FB839D;
     --second-background: #FDC1CE;
@@ -20,7 +21,11 @@ body {
 }
 
 .rank {
-    display: none;
+    display: block;
+}
+
+.contact {
+    display: block;
 }
 
 .quiz1 {
@@ -30,10 +35,12 @@ body {
     width: 360px;
     margin-bottom: 2rem;
 }
-.slidequiz{
- opacity: 0;
- animation: slidequiz 1.5s 500ms 1 forwards;
+
+.slidequiz {
+    opacity: 0;
+    animation: slidequiz 1.5s 500ms 1 forwards;
 }
+
 .pictureQuestion {
     position: relative;
     min-width: 350px;
@@ -43,10 +50,12 @@ body {
     padding-top: 10px;
     box-shadow: var(--shadow);
 }
-.pictureQuestion .img{
+
+.pictureQuestion .img {
     display: flex;
     justify-content: center;
 }
+
 .pictureQuestion img {
     width: 97%;
     height: 95%;
@@ -172,7 +181,7 @@ body {
     position: relative;
     width: 360px;
     height: 338px;
-    margin: auto ;
+    margin: auto;
     background: #FDC1CE;
     border-radius: 10px;
 }
@@ -334,11 +343,33 @@ a {
     z-index: 2;
 }
 
+.imgShame {
+    width: 346px;
+    height: 246px;
+    margin: auto;
+    margin-top: 2.5rem;
+    background: url('images/Rank/PhotodelaHonte.png');
+    background-size: cover;
+    z-index: 2;
+}
+
 .chocolatine {
     position: absolute;
     height: 20px;
     width: 33px;
     background: url("/images/Rank/Chocolatine.png");
+    background-size: contain;
+    animation-duration: 6s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    transition: opacity 1s;
+}
+
+.painchocolat {
+    position: absolute;
+    height: 30px;
+    width: 37px;
+    background: url("/images/Rank/Painauchocolat.png");
     background-size: contain;
     animation-duration: 6s;
     animation-name: slidein;
@@ -461,6 +492,7 @@ a {
     height: 66px;
     border-radius: 50%;
     display: flex;
+    cursor: pointer;
 }
 
 .twitter {
@@ -468,6 +500,7 @@ a {
     height: 66px;
     border-radius: 50%;
     display: flex;
+    cursor: pointer;
 }
 
 .instagram {
@@ -475,6 +508,7 @@ a {
     height: 66px;
     border-radius: 50%;
     display: flex;
+    cursor: pointer;
 }
 
 .whatsapps {
@@ -482,6 +516,7 @@ a {
     height: 66px;
     border-radius: 50%;
     display: flex;
+    cursor: pointer;
 
 }
 
@@ -568,6 +603,7 @@ a {
         opacity: 0;
     }
 }
+
 @keyframes slidequiz {
     100% {
         opacity: 1;
