@@ -73,25 +73,25 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
   // addEventListener sur chaque button de réponse
   const verificationAnswer = document.getElementsByClassName(`answerChoice${index}`);
   const arrayAnswerButton = Array.from(verificationAnswer);
-  arrayAnswerButton.forEach((element,buttonIndex) => {
-      element.addEventListener('click', () => {
-        arrayAnswerButton.forEach(button => {
-          button.style.pointerEvents='none';
-        })
-        // verifier la réponse de lutilisateur avec la bonne réponse de la question
-        // selon résultat contour rouge ou vert sur la réponse de lutilisateur
-        if (choices[buttonIndex]===correctAnswer){
-          element.style.border="4px solid green";
-        }else{
-          element.style.border="4px solid red";
-        }
-        // attendre 3s appel function selectionner question
-    setTimeout(() => {
-      selectquestionquiz(questionsVariees);
-    }, 2000);
-    
+  arrayAnswerButton.forEach((element, buttonIndex) => {
+    element.addEventListener('click', () => {
+      arrayAnswerButton.forEach(button => {
+        button.style.pointerEvents = 'none';
+      })
+      // verifier la réponse de lutilisateur avec la bonne réponse de la question
+      // selon résultat contour rouge ou vert sur la réponse de lutilisateur
+      if (choices[buttonIndex] === correctAnswer) {
+        element.style.border = "4px solid green";
+      } else {
+        element.style.border = "4px solid red";
+      }
+      // attendre 3s appel function selectionner question
+      setTimeout(() => {
+        selectquestionquiz(questionsVariees);
+      }, 2000);
+
+    });
   });
-});
 }
 // Demarrage du quiz init temps à 60s chronometre
 let temps = 60;
@@ -107,14 +107,14 @@ function selectquestionquiz(tableauquestion) {
   let randomIndex = Math.floor(Math.random() * tableauquestion.length);
   const { question, choices, correctAnswer, fact } =
     tableauquestion[randomIndex];
-    // afficher la question, stocker la bonne reponse dans une variable
+  // afficher la question, stocker la bonne reponse dans une variable
   generateRandomAnswer(question, choices, correctAnswer, fact);
   // supprimer la question du tableau afin de ne pas repeter la question
   tableauquestion.splice(randomIndex, 1);
 }
-setTimeout(() => {
-  selectquestionquiz(questionsVariees);
-}, 5000);
+// setTimeout(() => {
+//   selectquestionquiz(questionsVariees);
+// }, 5000);
 
 // compter le nombre de points
 
@@ -127,11 +127,46 @@ const aboutLq = document.querySelector('.aboutPhotoHomea')
 aboutQ.addEventListener('click', function () {
   aboutLq.classList.toggle("visible")
 })
+
 const playAgainButton = document.getElementById("playAgainButton");
-const quizSection = document.getElementById("quizSection");
+const quizSection = document.querySelector(".bodyquiz");
 
 playAgainButton.addEventListener("click", function () {
   // Affichez la section quiz quand on clique sur "retente ta chance".
   quizSection.classList.add("visible");
 });
+
+
+const rankFourElement = document.querySelector(".rankFour");
+const pseudoInput = document.getElementById("pseudo");
+
+pseudoInput.addEventListener("input", function () {
+  // Met à jour le texte de l'élément "rankFour" avec la valeur de l'input "pseudo"
+  rankFourElement.textContent = `${pseudoInput.value}: pts`;
+});
+
+// Bloquer le bouton "Envoyer" tant que tout les champs ne sont pas remplis"
+const firstNameInput = document.querySelector(".inputFirstName");
+const lastNameInput = document.querySelector(".inputLastName");
+const messageInput = document.querySelector(".inputMessage");
+const sendButton = document.getElementById("buttonSendContact");
+
+firstNameInput.addEventListener("input", toggleSendButtonState);
+lastNameInput.addEventListener("input", toggleSendButtonState);
+messageInput.addEventListener("input", toggleSendButtonState);
+
+function toggleSendButtonState() {
+  if (
+    firstNameInput.value.trim() !== "" &&
+    lastNameInput.value.trim() !== "" &&
+    messageInput.value.trim() !== ""
+  ) {
+    sendButton.disabled = false; // Activer le bouton "Envoyer" si tous les champs sont remplis
+  } else {
+    sendButton.disabled = true; // Désactiver le bouton "Envoyer" si un champ est vide
+  }
+}
+
+// Désactivez initialement le bouton "Envoyer" au chargement de la page
+sendButton.disabled = true;
 
