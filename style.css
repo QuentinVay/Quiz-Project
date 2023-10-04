@@ -640,6 +640,7 @@ a {
         margin-top: 15px;
         max-width: 1280px;
         width: 1280px;
+        cursor: url(/images/Rank/Chocolatine.png), auto;
     }
 
     .listNavBar {
@@ -648,7 +649,6 @@ a {
         margin-left: 0px;
         padding-inline: 25%;
         padding-block: 12px;
-
 
     }
 
@@ -720,6 +720,7 @@ a {
         background-color: var(--second-background);
         box-shadow: none;
     }
+
 
 
 
