@@ -8,7 +8,6 @@ const startQuiz = document.querySelector('.buttonStartHome');
 startQuiz.addEventListener('click', ()=>{
   // Demarrage du quiz init temps à 60s chronometre
  nameUser= document.getElementById('pseudo').value;
-  console.log(nameUser);
   startChronometre(tempsTimer);
   selectquestionquiz(questionsVariees);
 })
@@ -63,6 +62,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       </div>
   </div>
   <div class="barTimeProgress">
+      <div class="imgVideTimeProgress" id="idBarProgress${index}"></div>
       <div class="imgTopTimeProgress"></div>
       <div class="imgBottonTimeProgress"></div>
   </div>
@@ -73,6 +73,8 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
   <button class="answerChoice${index}">D) ${choices[3]}</button>
   </div>`;
   bodySectionQuiz.innerHTML += bodyQuiz;
+  let progressBar = document.getElementById(`idBarProgress${index}`);
+  progressBar.style.width=tempsTimer*1.666666+'%';
   if (compteur > 0) {
     const animationQuiz = document.getElementById(compteur);
     animationQuiz.classList.toggle("slidequiz");
@@ -111,11 +113,12 @@ let timeprogress;
 
 function startChronometre(temps) {
   clearInterval(timeprogress); 
-
+  
   timeprogress = setInterval(() => {
     temps--;
+  
     if (temps === 0) {
-      clearInterval(timeprogress); 
+      clearInterval(timeprogress);
       tempsTimer = 0;
     }
   }, 1000);
@@ -127,9 +130,6 @@ function startChronometre(temps) {
 
   return timeprogress;
 }
-
-
-
 
 // function selectionner une question aléatoirement dans un tableau
 function selectquestionquiz(tableauquestion) {
@@ -165,4 +165,8 @@ playAgainButton.addEventListener("click", function () {
   // Affichez la section quiz quand on clique sur "retente ta chance".
   quizSection.classList.add("visible");
 });
+
+
+// init barre à 100% au demarrage du quiz
+// à chaque seconde écoulé diminuer la taille de la barre
 
