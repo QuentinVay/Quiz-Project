@@ -20,23 +20,24 @@ let progressBar;
 let buttonsEnable;
 let endQuiz = false
 
-function initialisationQuiz(){
-  bodySectionQuiz.innerHTML='';
-  tempsTimer=60;
-  compteur=0;
+function initialisationQuiz() {
+  bodySectionQuiz.innerHTML = '';
+  tempsTimer = 60;
+  compteur = 0;
   index = 0;
   nombrepoints=0;
   endQuiz = false
   affichageRank.style.display="none";
+
   imgTrophy.style.display = "none";
   imgShame.style.display = "none";
 }
-startQuiz.addEventListener('click', ()=>{
+startQuiz.addEventListener('click', () => {
   initialisationQuiz();
-// Demarrage du quiz init temps à 60s chronometre
-  nameUser= document.getElementById('pseudo').value;
-  buttonsEnable = selectquestionquiz(questionsVariees); 
-  tempsRestant=startChronometre(tempsTimer,buttonsEnable);
+  // Demarrage du quiz init temps à 60s chronometre
+  nameUser = document.getElementById('pseudo').value;
+  buttonsEnable = selectquestionquiz(questionsVariees);
+  tempsRestant = startChronometre(tempsTimer, buttonsEnable);
 });
 
 function createPastry(className) {
@@ -51,7 +52,7 @@ function createPastry(className) {
 function showRank() {
   const affichageRank = document.getElementById('rankSelection');
   const affichageScoreRank = document.querySelector('.detailsRankUserName');
-  endQuiz=true;
+  endQuiz = true;
 
   if (nombrepoints >= 100) {
     // Cas où nombrepoints est supérieur ou égal à 100 (team chocolatine)
@@ -64,14 +65,14 @@ function showRank() {
     imgShame.style.display = "block";
   }
   setTimeout(() => {
-    affichageRank.style.display = "block";
+    affichageRank.style.display = "grid";
     affichageRank.scrollIntoView();
   }, 2000);
   const rankFourElement = document.querySelector(".rankFour");
   const pseudoInput = document.getElementById("pseudo");
   // mise à jour le texte de l'élément "rankFour" avec la valeur de l'input "pseudo" et la valeur de la variable "nombrepoints"
   rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
-  
+
   function createPastryAndHandleClick(className) {
     const element = createPastry(className);
     body.appendChild(element);
@@ -120,6 +121,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
     animationQuiz.classList.toggle("slidequiz");
   }
   compteur++;
+
   const element = document.getElementById(`${index}`);
   console.log(element);
   if (!endQuiz){
@@ -144,22 +146,22 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       }
 
       // attendre 2s appel function selectionner question
-      tempsRestant+=1;
+      tempsRestant += 1;
       setTimeout(() => {
-        buttonsEnable=selectquestionquiz(questionsVariees);
-        tempsRestant=startChronometre(tempsRestant ,buttonsEnable)
+        buttonsEnable = selectquestionquiz(questionsVariees);
+        tempsRestant = startChronometre(tempsRestant, buttonsEnable)
       }, 2000);
 
     });
   });
   return arrayAnswerButton;
-  };
+};
 
 
 function disableButtons(buttons) {
-    buttons.forEach(button => {
-      button.style.pointerEvents = 'none';
-    });
+  buttons.forEach(button => {
+    button.style.pointerEvents = 'none';
+  });
 }
 
 
@@ -177,19 +179,19 @@ function startChronometre(temps, buttons) {
       showRank();
       disableButtons(buttons); // Désactiver les boutons lorsque le temps est écoulé
     }
-    
+
     // Mettez à jour la largeur de la barre de progression en fonction du temps restant
     const progressWidth = 99 - (temps / 60) * 99; // 60 est la durée totale en secondes
     progressBar.style.width = progressWidth + '%';
   }, 1000);
-  
+
   setTimeout(() => {
     clearInterval(timeprogress);
     console.log('timeout settimeout');
-    temps=0;
+    temps = 0;
     tempsTimer = 0;
     disableButtons(buttons); // Désactiver les boutons lorsque le temps est écoulé
-  }, 10000*temps);
+  }, 10000 * temps);
 
   return temps;
 }
@@ -197,13 +199,13 @@ function startChronometre(temps, buttons) {
 // function selectionner une question aléatoirement dans un tableau
 function selectquestionquiz(tableauquestion) {
 
-    let randomIndex = Math.floor(Math.random() * tableauquestion.length);
-    const { question, choices, correctAnswer, fact } =
-      tableauquestion[randomIndex];
-      // supprimer la question du tableau afin de ne pas repeter la question
-      tableauquestion.splice(randomIndex, 1);
-    // afficher la question, stocker la bonne reponse dans une variable
-    return generateRandomAnswer(question, choices, correctAnswer, fact);
+  let randomIndex = Math.floor(Math.random() * tableauquestion.length);
+  const { question, choices, correctAnswer, fact } =
+    tableauquestion[randomIndex];
+  // supprimer la question du tableau afin de ne pas repeter la question
+  tableauquestion.splice(randomIndex, 1);
+  // afficher la question, stocker la bonne reponse dans une variable
+  return generateRandomAnswer(question, choices, correctAnswer, fact);
 }
 
 let aboutQ = document.querySelector('.aboutPhotoHome');
