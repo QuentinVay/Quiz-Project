@@ -25,8 +25,10 @@ function initialisationQuiz() {
   tempsTimer = 60;
   compteur = 0;
   index = 0;
-  nombrepoints = 0;
-  affichageRank.style.display = "none";
+  nombrepoints=0;
+  endQuiz = false
+  affichageRank.style.display="none";
+
   imgTrophy.style.display = "none";
   imgShame.style.display = "none";
 }
@@ -119,8 +121,10 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
     animationQuiz.classList.toggle("slidequiz");
   }
   compteur++;
-  const element = document.getElementById(`numberid${compteur}`);
-  if (!endQuiz) {
+
+  const element = document.getElementById(`${index}`);
+  console.log(element);
+  if (!endQuiz){
     element.scrollIntoView();
     console.log('scroll');
   }
