@@ -6,7 +6,7 @@ const imgShame = document.querySelector(".imgShame");
 let marginLeft;
 let tempsTimer = 60;
 let timeprogress;
-let nombrepoints = 130;
+let nombrepoints = 0;
 let nameUser;
 
 const startQuiz = document.querySelector('.buttonStartHome');

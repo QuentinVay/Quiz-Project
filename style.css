@@ -193,6 +193,7 @@ body {
     margin: auto;
     background: #FDC1CE;
     border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .detailsRankUserName {
@@ -294,6 +295,7 @@ body {
     margin-block: 24px;
     margin-bottom: 30px;
     height: 265px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .textHidden {
@@ -413,9 +415,9 @@ a {
 
 .imgShame {
     width: 346px;
-    height: 246px;
+    height: 270px;
     margin: auto;
-    margin-top: 2.5rem;
+    margin-top: 10px;
     background: url('images/Rank/PhotodelaHonte.png');
     background-size: cover;
     z-index: 2;
@@ -528,7 +530,11 @@ a {
     align-items: center;
 }
 
-.textRankThree {
+.rankFive {
+    display: none;
+}
+
+.rankHome .textRankThree {
     margin: 10px;
 }
 
@@ -540,9 +546,13 @@ a {
     padding-left: 42px;
 }
 
+.challengeFriends .playAgain {
+    display: none;
+}
+
 .titleShare {
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
     margin: 8px;
 }
 
@@ -585,7 +595,6 @@ a {
     border-radius: 50%;
     display: flex;
     cursor: pointer;
-
 }
 
 /* Styles pour la section de contact */
@@ -612,7 +621,7 @@ a {
     margin-bottom: 20px;
 }
 
-.contactForm input[type="text"] {
+.contactForm input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -653,10 +662,6 @@ a {
     font-weight: bold;
 }
 
-
-
-
-
 @keyframes slidein {
     from {
         top: 0;
@@ -684,7 +689,6 @@ a {
         display: flex;
         align-items: normal;
         width: 1280px;
-
     }
 
     .photoBridgeHome {
@@ -700,7 +704,6 @@ a {
         margin-left: 0px;
         padding-inline: 25%;
         padding-block: 8px;
-
     }
 
     .burgermenu {
@@ -730,6 +733,8 @@ a {
         display: flex;
         flex-direction: row-reverse;
         width: 1280;
+        justify-content: center;
+        align-items: center;
     }
 
     .textHidden {
@@ -802,8 +807,6 @@ a {
     .pictureQuestion {
         width: 850px;
         height: 316px;
-
-
     }
 
     .pictureQuestion img {
@@ -813,7 +816,6 @@ a {
     .detailsQuestion {
         width: 100%;
         padding-block: 20px;
-
     }
 
     .quiz1 {
@@ -841,9 +843,166 @@ a {
         grid-template-columns: 50% 50%;
     }
 
+   .rankHome {
+        height: 295px;
+        width: 600px;
+    }
+  
+    .titleRankHome {
+        width: 300px;
+        height: 45px;
+        align-items: center;
+    }
 
+    .bodyRankHome {
+        height: 210px;
+        width: 500px;
+        font-size: 22px;
+    }
 
+    .rankOne {
+        height: 20%;
+    }
 
+    .rankTwo {
+        height: 20%;
+    }
 
+    .rankThree {
+        height: 20%;
+    }
 
+    .rankFour {
+        height: 20%;
+    }
+
+    .rankFive {
+        display: block;
+        padding-left: 42px;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .rank {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+        margin-bottom: 10px;
+    }
+
+    .bodyRank {
+        width: 600px;
+        height: 700px;
+        grid-row: 1 / span 2;
+    }
+
+    .imgTrophy {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        margin-top: 75px;
+    }
+
+    .imgShame {
+        width: 560px;
+        height: 500px;
+        margin: auto;
+        margin-top: 75px;
+    }
+
+    .rank .rankHome {
+        width: 100%;
+        height: 100%;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .rank .rankHome .titleRankHome {
+        width: 380px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .titleShare {
+        font-size: 26px;
+    }
+
+    .challengeFriends {
+        width: 100%;
+        height: 100%;
+        background: var(--second-background);
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .challengeFriends .playAgain {
+        display: block;
+        margin: auto;
+        font-size: 35px;
+        height: 60px;
+        width: 400px;
+    }
+
+    .titleShare {
+        margin: auto;
+    }
+
+    .containLogoReseaux {
+        margin: auto;
+        background: var(--second-background);
+        width: 80%;
+        height: 32%;
+    }
+
+    .containLogoReseaux * {
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .containLogoReseaux *:hover {
+        transform: scale(1.2);
+    }
+
+    .buttonPlay {
+        display: none;
+    }
+
+    .contactForm {
+        height: 70%;
+        width: 600px;
+    }
+
+    .contactDesktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    .contactFirstName {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .contactMessage{
+        grid-row: 2;
+        grid-column: 1 / span 2;
+    }
+
+    .centerButton{
+        grid-row: 3;
+        grid-column: 1 / span 2;
+        height: 60px;
+    }
 }

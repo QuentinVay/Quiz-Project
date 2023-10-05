@@ -49,32 +49,38 @@
                 </div>
             </div>
             <div class="bas">
-            <div class="rankHome">
-                <div class="titleRankHome">
-                    <p>CLASSEMENT</p>
+                <div class="rankHome">
+                    <div class="titleRankHome">
+                        <p>CLASSEMENT</p>
+                    </div>
+                    <div class="bodyRankHome">
+                        <div class="rankOne">
+                            <img src="images/Acueil/image-goldMedaille.png" alt="Médaille d'or classement">
+                            <div class="textRankOne">
+                                <p>Marcelobgdu31: 1000 pts</p>
+                            </div>
+                        </div>
+                        <div class="rankTwo">
+                            <img src="images/Acueil/image-SylverMedaille.png" alt="Médaille d'argent classement">
+                            <div class="textRankTwo">
+                                <p>xXxAdrienxXx: 999 pts</p>
+                            </div>
+                        </div>
+                        <div class="rankThree">
+                            <img src="images/Acueil/image-BronzeMedaille.png" alt="Médaille de bronze classement">
+                            <div class="textRankThree">
+                                <p>Quentin: 998 pts</p>
+                            </div>
+                        </div>
+                        <div class="rankFour">
+                            <p>Sacha : 500 pts</p>
+                        </div>
+                        <div class="rankFive">
+                            <p>Panda : 150 pts</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bodyRankHome">
-                    <div class="rankOne">
-                        <img src="images/Acueil/image-goldMedaille.png" alt="Médaille d'or classement">
-                        <div class="textRankOne">
-                            <p>Marcelobgdu31: 1000 pts</p>
-                        </div>
-                    </div>
-                    <div class="rankTwo">
-                        <img src="images/Acueil/image-SylverMedaille.png" alt="Médaille d'argent classement">
-                        <div class="textRankTwo">
-                            <p>xXxAdrienxXx: 999 pts</p>
-                        </div>
-                    </div>
-                    <div class="rankThree">
-                        <img src="images/Acueil/image-BronzeMedaille.png" alt="Médaille de bronze classement">
-                        <div class="textRankThree">
-                            <p>Quentin: 998 pts</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+              
             <div class="startHome">
                 <div class="textHidden">
                     <h1>Bienvenue au chocoquiz de Toulouse!</h1>
@@ -93,8 +99,8 @@
                     <button class="buttonStartHome">Commence le Quiz!!</button>
                 </a>
 
+                </div>
             </div>
-        </div>
     </section>
     <!-- Fin de section Home -->
 
@@ -106,7 +112,7 @@
     <section class="rank" id="rankSelection">
         <div class="bodyRank">
             <div class="detailsRankUserName">
-                
+
             </div>
             <div class="imgTrophy"></div>
             <div class="imgShame"></div>
@@ -140,9 +146,13 @@
                 <div class="rankFour">
                     <p>User name : x pts</p>
                 </div>
+                <div class="rankFive">
+                    <p>Panda : 150 pts</p>
+                </div>
             </div>
         </div>
         <div class="challengeFriends">
+            <button class="playAgain" id="playAgainButton">Retente ta chance !</button>
             <div class="titleShare">
                 <h3>CHALLENGE TES AMIES !</h3>
             </div>
@@ -169,21 +179,28 @@
             <div class="titleContact">
                 <p>Nous contacter</p>
             </div>
-            <Form>
-                <p>Prenom</p>
-                <label for="" class="firstName"></label>
-                <input type="text" class="inputFirstName">
-                <p>Nom</p>
-                <label for="" class="lastName"></label>
-                <input type="text" class="inputLastName">
-                <p>Message</p>
-                <label for="" class="MessageContact"></label>
-                <textarea class="inputMessage" name="message" id="message" required></textarea>
-                <div class="centerButton">
-                    <button class="SendContact" id="buttonSendContact">Envoyer</button>
+            <form>
+                <div class="contactDesktop">
+                    <div class="contactFirstName">
+                        <p>Prenom</p>
+                        <label for="" class="firstName"></label>
+                        <input type="text" class="inputFirstName">
+                    </div>
+                    <div class="contactName">
+                        <p>Nom</p>
+                        <label for="" class="lastName"></label>
+                        <input type="text" class="inputLastName">
+                    </div>
+                    <div class="contactMessage">
+                        <p>Message</p>
+                        <label for="" class="MessageContact"></label>
+                        <textarea class="inputMessage" name="message" id="message" required></textarea>
+                    </div>
+                    <div class="centerButton">
+                        <button class="SendContact" id="buttonSendContact">Envoyer</button>
+                    </div>
                 </div>
-
-            </Form>
+            </form>
         </div>
     </section>
     <script type="module" src="script.js"></script>
