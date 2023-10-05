@@ -153,7 +153,6 @@ body {
     flex-direction: column;
     width: 360px;
     align-items: center;
-
 }
 
 .detailsQuestion {
@@ -228,7 +227,6 @@ body {
     min-width: 25px;
     margin-top: 4px;
     margin-left: 4px;
-
 }
 
 .photoHome {
@@ -349,14 +347,12 @@ a {
 
 .visible {
     display: block;
-
 }
 
 .burgermenu {
     margin-left: 150px;
     position: fixed;
     z-index: 3;
-
 }
 
 .tester {
@@ -371,7 +367,6 @@ a {
     height: 5px;
     background-color: black;
     margin: 6px;
-
 }
 
 #pseudo {
@@ -741,7 +736,6 @@ a {
     .navBarHidden {
         margin-left: 0px;
         display: block;
-
     }
 
     .logoHome {
@@ -789,7 +783,6 @@ a {
         height: 295px;
         width: 600px;
         margin-inline: 20px;
-
     }
 
     .mascotte {
@@ -809,7 +802,6 @@ a {
         position: absolute;
         left: 1.5%;
         margin-top: 15px;
-
     }
 
     .textHidden h1 {
@@ -884,22 +876,10 @@ a {
         font-size: 22px;
     }
 
-    .rankOne {
-        height: 20%;
-    }
-
-    .rankTwo {
-        height: 20%;
-    }
-
-    .rankThree {
-        height: 20%;
-    }
-
-    .rankFourFix {
-        height: 20%;
-    }
-
+    .rankOne,
+    .rankTwo,
+    .rankThree,
+    .rankFourFix, 
     .rankFour {
         height: 20%;
     }

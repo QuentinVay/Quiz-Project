@@ -242,7 +242,7 @@ pseudoInput.addEventListener("input", function () {
   rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
 });
 
-// Bloquer le bouton "Envoyer" tant que tout les champs ne sont pas remplis"
+// Bloquer le bouton "Envoyer" du formulaire tant que tout les champs ne sont pas remplis"
 const firstNameInput = document.querySelector(".inputFirstName");
 const lastNameInput = document.querySelector(".inputLastName");
 const messageInput = document.querySelector(".inputMessage");
