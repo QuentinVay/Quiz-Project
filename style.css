@@ -269,13 +269,14 @@ body {
     border-radius: 12px;
     font-size: 14px;
     width: 100%;
-    padding: 6px;
+    padding: 0.8rem;
 }
 
 .titleSaviezVous {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+    padding-bottom: 0.8rem;
 }
 
 .visible {
@@ -820,12 +821,12 @@ a {
 
     .textHidden h1 {
         text-align: center;
-        font-size: clamp(30px, 2vw, 37px);
+        font-size: clamp(30px, 2vw, 34px);
     }
 
     .textHidden p {
         margin-left: 8px;
-        font-size: clamp(20px, 1.5vw, 30px);
+        font-size: clamp(20px, 1.5vw, 24px);
         padding: 10px;
     }
 
