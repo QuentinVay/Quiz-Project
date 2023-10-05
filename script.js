@@ -46,6 +46,7 @@ function createPastry(className) {
   return element;
 }
 
+
 function showRank() {
   const affichageRank = document.getElementById('rankSelection');
   const affichageScoreRank = document.querySelector('.detailsRankUserName');
@@ -103,13 +104,16 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       <div class="imgBottonTimeProgress"></div>
   </div>
   <div class="detailsQuestion">${quention}</div>
+  <div class="Choice">
   <button class="answerChoice${index}">A) ${choices[0]}</button>
   <button class="answerChoice${index}">B) ${choices[1]}</button>
   <button class="answerChoice${index}">C) ${choices[2]}</button>
   <button class="answerChoice${index}">D) ${choices[3]}</button>
+  </div>
   </div>`;
   bodySectionQuiz.innerHTML += bodyQuiz;
-   progressBar = document.getElementById(`idBarProgress${index}`);
+  progressBar = document.getElementById(`idBarProgress${index}`);
+
   if (compteur > 0) {
     const animationQuiz = document.getElementById(compteur);
     animationQuiz.classList.toggle("slidequiz");
@@ -128,6 +132,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       disableButtons(arrayAnswerButton)
       // verifier la réponse de lutilisateur avec la bonne réponse de la question
       // selon résultat contour rouge ou vert sur la réponse de lutilisateur
+
       // compter le nombre de points
       if (choices[buttonIndex] === correctAnswer) {
         element.style.border = "4px solid green";
@@ -135,6 +140,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       } else {
         element.style.border = "4px solid red";
       }
+
       // attendre 2s appel function selectionner question
       tempsRestant+=1;
       setTimeout(() => {
@@ -147,11 +153,13 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
   return arrayAnswerButton;
   };
 
+
 function disableButtons(buttons) {
     buttons.forEach(button => {
       button.style.pointerEvents = 'none';
     });
 }
+
 
 function startChronometre(temps, buttons) {
   clearInterval(timeprogress);
@@ -196,12 +204,20 @@ function selectquestionquiz(tableauquestion) {
     return generateRandomAnswer(question, choices, correctAnswer, fact);
 }
 
-
 let aboutQ = document.querySelector('.aboutPhotoHome');
 const aboutLq = document.querySelector('.aboutPhotoHomea');
 
 aboutQ.addEventListener('click', function () {
   aboutLq.classList.toggle("visible")
+})
+
+let navbarH = document.querySelector('.navBarFloatting');
+const NavbarNotH = document.querySelector('.navBarHidden');
+let burgerM = document.querySelector('.burgermenu')
+
+navbarH.addEventListener('click', function () {
+  NavbarNotH.classList.toggle("visible"),
+    burgerM.classList.toggle('tester')
 })
 
 const playAgainButton = document.getElementById("playAgainButton");
@@ -245,5 +261,3 @@ function toggleSendButtonState() {
 
 // Désactivez initialement le bouton "Envoyer" au chargement de la page
 sendButton.disabled = true;
-
-

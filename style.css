@@ -132,7 +132,8 @@ body {
     border-radius: 3px;
     background: #DEBE6B;
 }
-.imgVideTimeProgress{
+
+.imgVideTimeProgress {
     position: absolute;
     right: 2px;
     bottom: 2px;
@@ -142,6 +143,14 @@ body {
     background: white;
     z-index: 3;
     transition: width 1s;
+}
+
+.Choice {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    align-items: center;
+
 }
 
 .detailsQuestion {
@@ -185,6 +194,7 @@ body {
     margin: auto;
     background: #FDC1CE;
     border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .detailsRankUserName {
@@ -204,7 +214,7 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 360px;
 }
 
 .logoHome {
@@ -212,14 +222,17 @@ body {
     border-radius: 100px;
     opacity: 0.6;
     width: 3%;
+    min-width: 25px;
     margin-top: 4px;
     margin-left: 4px;
+
 }
 
 .photoBridgeHome {
     display: block;
     margin: auto;
     max-width: 390px;
+    margin-top: 0px;
 }
 
 .aboutPhotoHome {
@@ -239,7 +252,7 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 12px;
     font-size: 8px;
-    width: 80px;
+    width: 90px;
     padding-left: 3px;
     margin-left: 20px;
 }
@@ -267,17 +280,27 @@ body {
     font-size: 15px;
 }
 
+.bas {
+    display: grid;
+    grid-gap: 18px;
+}
+
 .startHome {
     display: grid;
     grid-gap: 10px;
     background-color: var(--second-background);
     border-radius: 10px;
     justify-content: center;
-    max-width: 360px;
+    width: 360px;
     margin: auto;
     margin-block: 24px;
     margin-bottom: 30px;
     height: 265px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.textHidden {
+    display: none;
 }
 
 .titleStartHome {
@@ -298,6 +321,50 @@ a {
     color: black;
 }
 
+.listNavBar {
+    background-color: var(--last-background);
+    padding-bottom: 17px;
+    padding-inline: 12px;
+    width: 350px;
+    margin-left: -45px;
+    z-index: 2;
+}
+
+.navBarHidden {
+    display: none;
+    height: 0px;
+    position: fixed;
+    margin-left: -150px;
+    z-index: 2;
+}
+
+.visible {
+    display: block;
+
+}
+
+.burgermenu {
+    margin-left: 150px;
+    position: fixed;
+    z-index: 3;
+
+}
+
+.tester {
+    margin-left: 150px;
+    background-color: var(--last-background);
+    height: 36px;
+}
+
+.burgermenu span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px;
+
+}
+
 #pseudo {
     margin-inline: 15px;
     margin-top: 15px;
@@ -314,8 +381,11 @@ a {
     position: absolute;
     padding-block: 10px;
     padding-inline: 5px;
+}
 
-
+.mascotte,
+.drapeau {
+    display: none;
 }
 
 .buttonStartHome {
@@ -349,9 +419,9 @@ a {
 .imgShame {
     display: none;
     width: 346px;
-    height: 246px;
+    height: 270px;
     margin: auto;
-    margin-top: 2.5rem;
+    margin-top: 10px;
     background: url('images/Rank/PhotodelaHonte.png');
     background-size: cover;
     z-index: 2;
@@ -464,7 +534,11 @@ a {
     align-items: center;
 }
 
-.textRankThree {
+.rankFive {
+    display: none;
+}
+
+.rankHome .textRankThree {
     margin: 10px;
 }
 
@@ -476,9 +550,13 @@ a {
     padding-left: 42px;
 }
 
+.challengeFriends .playAgain {
+    display: none;
+}
+
 .titleShare {
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
     margin: 8px;
 }
 
@@ -521,7 +599,6 @@ a {
     border-radius: 50%;
     display: flex;
     cursor: pointer;
-
 }
 
 /* Styles pour la section de contact */
@@ -548,7 +625,7 @@ a {
     margin-bottom: 20px;
 }
 
-.contactForm input[type="text"] {
+.contactForm input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -589,10 +666,6 @@ a {
     font-weight: bold;
 }
 
-
-
-
-
 @keyframes slidein {
     from {
         top: 0;
@@ -611,5 +684,329 @@ a {
 @keyframes slidequiz {
     100% {
         opacity: 1;
+    }
+}
+
+@media screen and (min-width : 1280px) {
+
+    .navBarFloatting {
+        display: flex;
+        align-items: normal;
+        width: 1280px;
+    }
+
+    .photoBridgeHome {
+        margin-top: 15px;
+        max-width: 1280px;
+        width: 1280px;
+        cursor: url(/images/Rank/Chocolatine.png), auto;
+    }
+
+    .listNavBar {
+        width: 1280px;
+        max-width: 100%;
+        margin-left: 0px;
+        padding-inline: 25%;
+        padding-block: 8px;
+    }
+
+    .burgermenu {
+        margin-left: 1200px;
+        display: none;
+    }
+
+    .navBarHidden {
+        margin-left: 0px;
+        display: block;
+
+    }
+
+    .logoHome {
+        z-index: 3;
+        position: fixed;
+        margin-top: -10px;
+        max-width: 50px;
+    }
+
+    .titleHome,
+    .detailsWelcomeHome {
+        display: none;
+    }
+
+    .bas {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 1280;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .textHidden {
+        display: block;
+    }
+
+    .aboutPhotoHome {
+        display: none;
+    }
+
+    .aboutPhotoHomea {
+        display: block;
+        width: 310px;
+        height: 150px;
+        font-size: 24px;
+        top: 180px;
+        right: 5%;
+    }
+
+    .startHome {
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 295px;
+        width: 600px;
+        margin-inline: 20px;
+
+    }
+
+    .mascotte {
+        display: block;
+        height: 100px;
+        opacity: 0.9;
+        position: absolute;
+        left: 3%;
+        margin-top: 150px;
+        z-index: 1;
+
+    }
+
+    .drapeau {
+        display: block;
+        height: 100px;
+        opacity: 0.9;
+        position: absolute;
+        left: 2%;
+        margin-top: 15px;
+
+    }
+
+    .textHidden h1 {
+        text-align: center;
+    }
+
+    .textHidden p {
+        margin-left: 8px;
+    }
+
+    .titleStartHome {
+        background-color: var(--second-background);
+        box-shadow: none;
+    }
+
+    .imgChrono {
+        height: 115px;
+        width: 115px;
+    }
+
+    .pictureQuestion {
+        width: 850px;
+        height: 316px;
+    }
+
+    .pictureQuestion img {
+        max-height: 292px;
+    }
+
+    .detailsQuestion {
+        width: 100%;
+        padding-block: 20px;
+    }
+
+    .quiz1 {
+        width: 100%;
+        margin-left: 60px;
+    }
+
+    .numberQuestion {
+        left: 1%
+    }
+
+    .bodyquiz button {
+        width: 90%;
+    }
+
+    .Choice {
+        margin-top: 10px;
+        width: 95%;
+        max-width: 550px;
+        height: 100%;
+        display: grid;
+        grid-gap: 20px;
+        padding-left: 0.3rem;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+    }
+
+   .rankHome {
+        height: 295px;
+        width: 600px;
+    }
+  
+    .titleRankHome {
+        width: 300px;
+        height: 45px;
+        align-items: center;
+    }
+
+    .bodyRankHome {
+        height: 210px;
+        width: 500px;
+        font-size: 22px;
+    }
+
+    .rankOne {
+        height: 20%;
+    }
+
+    .rankTwo {
+        height: 20%;
+    }
+
+    .rankThree {
+        height: 20%;
+    }
+
+    .rankFour {
+        height: 20%;
+    }
+
+    .rankFive {
+        display: block;
+        padding-left: 42px;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .rank {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+        margin-bottom: 10px;
+    }
+
+    .bodyRank {
+        width: 600px;
+        height: 700px;
+        grid-row: 1 / span 2;
+    }
+
+    .imgTrophy {
+        width: 500px;
+        height: 500px;
+        margin: auto;
+        margin-top: 75px;
+    }
+
+    .imgShame {
+        width: 560px;
+        height: 500px;
+        margin: auto;
+        margin-top: 75px;
+    }
+
+    .rank .rankHome {
+        width: 100%;
+        height: 100%;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .rank .rankHome .titleRankHome {
+        width: 380px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    .titleShare {
+        font-size: 26px;
+    }
+
+    .challengeFriends {
+        width: 100%;
+        height: 100%;
+        background: var(--second-background);
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .challengeFriends .playAgain {
+        display: block;
+        margin: auto;
+        font-size: 35px;
+        height: 60px;
+        width: 400px;
+    }
+
+    .titleShare {
+        margin: auto;
+    }
+
+    .containLogoReseaux {
+        margin: auto;
+        background: var(--second-background);
+        width: 80%;
+        height: 32%;
+    }
+
+    .containLogoReseaux * {
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .containLogoReseaux *:hover {
+        transform: scale(1.2);
+    }
+
+    .buttonPlay {
+        display: none;
+    }
+
+    .contactForm {
+        height: 70%;
+        width: 600px;
+    }
+
+    .contactDesktop {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 20px;
+    }
+
+    .contactFirstName {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    .contactMessage{
+        grid-row: 2;
+        grid-column: 1 / span 2;
+    }
+
+    .centerButton{
+        grid-row: 3;
+        grid-column: 1 / span 2;
+        height: 60px;
     }
 }

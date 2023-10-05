@@ -13,15 +13,20 @@
 
 <body>
     <section class="navBarFloatting">
-        <nav class="navBarVissible">
+        <div class="burgermenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- <nav class="navBarVissible">
             <div class="logoNavBar"></div>
             <div class="burgerNavBarOpen"></div>
-        </nav>
+        </nav> -->
         <nav class="navBarHidden">
             <ul class="listNavBar">
-                <li class="home"><a href="#home">Acceuil</a></li>
+                <li class="home"><a href="#home">Accueil</a></li>
                 <!-- <li class="quiz"></li> -->
-                <li class="contact"><a href="#contactSelection">Contact</a></li>
+                <li class="contactNav"><a href="#contactSelection">Contact</a></li>
             </ul>
             <div class="burgerNavBarClose"></div>
         </nav>
@@ -37,50 +42,64 @@
             <div class="aboutPhotoHomea">Le pont Saint-Pierre à 160 ans, pendant cette longue vie il a été reconstruit 3
                 fois. Sa traversée a été payante jusqu'en 1904 par une société privée.</div>
             <div class="welcomeHome">
-                <h1 class="titleHome">Bienvenu au chocoquiz de Toulouse!</h1>
+                <h1 class="titleHome">Bienvenue au chocoquiz de Toulouse!</h1>
                 <div class="detailsWelcomeHome">
                     <p>Découvrez le quiz exclusif qui vous permettra à la fois d'enrichir vos connaissances, de vous
                         divertir et de déterminer si vous êtes véritablement un Toulousain authentique !</p>
                 </div>
             </div>
-            <div class="rankHome">
-                <div class="titleRankHome">
-                    <p>CLASSEMENT</p>
+            <div class="bas">
+                <div class="rankHome">
+                    <div class="titleRankHome">
+                        <p>CLASSEMENT</p>
+                    </div>
+                    <div class="bodyRankHome">
+                        <div class="rankOne">
+                            <img src="images/Acueil/image-goldMedaille.png" alt="Médaille d'or classement">
+                            <div class="textRankOne">
+                                <p>Marcelobgdu31: 1000 pts</p>
+                            </div>
+                        </div>
+                        <div class="rankTwo">
+                            <img src="images/Acueil/image-SylverMedaille.png" alt="Médaille d'argent classement">
+                            <div class="textRankTwo">
+                                <p>xXxAdrienxXx: 999 pts</p>
+                            </div>
+                        </div>
+                        <div class="rankThree">
+                            <img src="images/Acueil/image-BronzeMedaille.png" alt="Médaille de bronze classement">
+                            <div class="textRankThree">
+                                <p>Quentin: 998 pts</p>
+                            </div>
+                        </div>
+                        <div class="rankFour">
+                            <p>Sacha : 500 pts</p>
+                        </div>
+                        <div class="rankFive">
+                            <p>Panda : 150 pts</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bodyRankHome">
-                    <div class="rankOne">
-                        <img src="images/Acueil/image-goldMedaille.png" alt="Médaille d'or classement">
-                        <div class="textRankOne">
-                            <p>Marcelobgdu31: 1000 pts</p>
-                        </div>
-                    </div>
-                    <div class="rankTwo">
-                        <img src="images/Acueil/image-SylverMedaille.png" alt="Médaille d'argent classement">
-                        <div class="textRankTwo">
-                            <p>xXxAdrienxXx: 999 pts</p>
-                        </div>
-                    </div>
-                    <div class="rankThree">
-                        <img src="images/Acueil/image-BronzeMedaille.png" alt="Médaille de bronze classement">
-                        <div class="textRankThree">
-                            <p>Quentin: 998 pts</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+              
             <div class="startHome">
-
+                <div class="textHidden">
+                    <h1>Bienvenue au chocoquiz de Toulouse!</h1>
+                    <p>Découvrez le quiz exclusif qui vous permettra à la fois d'enrichir vos connaissances, de vous
+                        divertir et de déterminer si vous êtes véritablement un Toulousain authentique !</p>
+                </div>
                 <div class="titleStartHome">Rentre ton Pseudo!</div>
                 <div class="nameInput">
                     <input type="text" id="pseudo" name="name" required minlength="3" maxlength="18" size="18" />
                     <img class="imgChrono" src="/images/Acueil/Chronometre.png">
                 </div>
                 <div class="imgChronoStartHome"></div>
-                <a href="#contactUs">
+                <img class="mascotte" src="/images/Acueil/mascotte-Toulouse-_modifier-removebg-preview.png" >
+                <img class="drapeau" src="/images/Acueil/image_12-removebg-preview.png">               
+                <a href="#contactSelection">
                     <button class="buttonStartHome">Commence le Quiz!!</button>
                 </a>
 
+                </div>
             </div>
     </section>
     <!-- Fin de section Home -->
@@ -93,7 +112,7 @@
     <section class="rank" id="rankSelection">
         <div class="bodyRank">
             <div class="detailsRankUserName">
-                
+
             </div>
             <div class="imgTrophy"></div>
             <div class="imgShame"></div>
@@ -127,9 +146,13 @@
                 <div class="rankFour">
                     <p>User name : x pts</p>
                 </div>
+                <div class="rankFive">
+                    <p>Panda : 150 pts</p>
+                </div>
             </div>
         </div>
         <div class="challengeFriends">
+            <button class="playAgain" id="playAgainButton">Retente ta chance !</button>
             <div class="titleShare">
                 <h3>CHALLENGE TES AMIES !</h3>
             </div>
@@ -156,21 +179,28 @@
             <div class="titleContact">
                 <p>Nous contacter</p>
             </div>
-            <Form>
-                <p>Prenom</p>
-                <label for="" class="firstName"></label>
-                <input type="text" class="inputFirstName">
-                <p>Nom</p>
-                <label for="" class="lastName"></label>
-                <input type="text" class="inputLastName">
-                <p>Message</p>
-                <label for="" class="MessageContact"></label>
-                <textarea class="inputMessage" name="message" id="message" required></textarea>
-                <div class="centerButton">
-                    <button class="SendContact" id="buttonSendContact">Envoyer</button>
+            <form>
+                <div class="contactDesktop">
+                    <div class="contactFirstName">
+                        <p>Prenom</p>
+                        <label for="" class="firstName"></label>
+                        <input type="text" class="inputFirstName">
+                    </div>
+                    <div class="contactName">
+                        <p>Nom</p>
+                        <label for="" class="lastName"></label>
+                        <input type="text" class="inputLastName">
+                    </div>
+                    <div class="contactMessage">
+                        <p>Message</p>
+                        <label for="" class="MessageContact"></label>
+                        <textarea class="inputMessage" name="message" id="message" required></textarea>
+                    </div>
+                    <div class="centerButton">
+                        <button class="SendContact" id="buttonSendContact">Envoyer</button>
+                    </div>
                 </div>
-
-            </Form>
+            </form>
         </div>
     </section>
     <script type="module" src="script.js"></script>
