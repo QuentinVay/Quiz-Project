@@ -62,16 +62,17 @@ function showRank() {
     // Cas où nombrepoints est inférieur à 100 (team pain au chocolat)
     tempsTimer = 60;
     affichageScoreRank.innerHTML = `<p>Désolé ${nameUser} tu fais partie de la team pain au chocolat! ton score est de :${nombrepoints}</p>`;
-    imgShame.style.display = "block";
+    imgShame.style.display = "block";lolm
   }
   setTimeout(() => {
     affichageRank.style.display = "grid";
     affichageRank.scrollIntoView();
   }, 2000);
-  const rankFourElement = document.querySelector(".rankFour");
-  const pseudoInput = document.getElementById("pseudo");
-  // mise à jour le texte de l'élément "rankFour" avec la valeur de l'input "pseudo" et la valeur de la variable "nombrepoints"
-  rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
+  
+  // const rankFourElement = document.querySelector(".rankFour");
+  // const pseudoInput = document.getElementById("pseudo");
+  // // mise à jour le texte de l'élément "rankFour" avec la valeur de l'input "pseudo" et la valeur de la variable "nombrepoints"
+  // rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
 
   function createPastryAndHandleClick(className) {
     const element = createPastry(className);
@@ -241,7 +242,7 @@ pseudoInput.addEventListener("input", function () {
   rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
 });
 
-// Bloquer le bouton "Envoyer" tant que tout les champs ne sont pas remplis"
+// Bloquer le bouton "Envoyer" du formulaire tant que tout les champs ne sont pas remplis"
 const firstNameInput = document.querySelector(".inputFirstName");
 const lastNameInput = document.querySelector(".inputLastName");
 const messageInput = document.querySelector(".inputMessage");
@@ -265,3 +266,11 @@ function toggleSendButtonState() {
 
 // Désactivez initialement le bouton "Envoyer" au chargement de la page
 sendButton.disabled = true;
+
+if (nombrepoints < 70) {
+  const rankFour = document.querySelector(".rankFour");
+  const rankFive = document.querySelector(".rankFive");
+
+  // Insérez .rankFive avant .rankFour pour les échanger de place
+  rankFour.parentNode.insertBefore(rankFive, rankFour);
+}
