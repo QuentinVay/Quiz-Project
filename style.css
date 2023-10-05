@@ -692,19 +692,23 @@ a {
     .navBarFloatting {
         display: flex;
         align-items: normal;
-        width: 1280px;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .home {
+        width: 100%;
     }
 
     .photoBridgeHome {
         margin-top: 15px;
-        max-width: 1280px;
-        width: 1280px;
+        max-width: 100%;
+        width: 100%;
         cursor: url(/images/Rank/Chocolatine.png), auto;
     }
 
     .listNavBar {
-        width: 1280px;
-        max-width: 100%;
+        width: 100%;
         margin-left: 0px;
         padding-inline: 25%;
         padding-block: 8px;
@@ -718,6 +722,7 @@ a {
     .navBarHidden {
         margin-left: 0px;
         display: block;
+        width: 100%;
 
     }
 
@@ -726,6 +731,7 @@ a {
         position: fixed;
         margin-top: -10px;
         max-width: 50px;
+        margin-left: 3%;
     }
 
     .titleHome,
@@ -736,9 +742,10 @@ a {
     .bas {
         display: flex;
         flex-direction: row-reverse;
-        width: 1280;
+        width: 100%;
         justify-content: center;
         align-items: center;
+        margin-bottom: 10%;
     }
 
     .textHidden {
@@ -754,7 +761,7 @@ a {
         width: 310px;
         height: 150px;
         font-size: 24px;
-        top: 180px;
+        top: 20%;
         right: 5%;
     }
 
@@ -765,8 +772,6 @@ a {
         flex-direction: column;
         height: 295px;
         width: 600px;
-        margin-inline: 20px;
-
     }
 
     .mascotte {
@@ -809,8 +814,17 @@ a {
     }
 
     .pictureQuestion {
-        width: 850px;
-        height: 316px;
+        width: 80%;
+        max-width: 1300px;
+        height: 100%;
+        padding-bottom: 10px;
+        margin-left: 15%;
+        margin-right: 8%;
+    }
+
+    .bodyquiz {
+        width: 100%;
+        margin-bottom: 5%;
     }
 
     .pictureQuestion img {
@@ -820,11 +834,13 @@ a {
     .detailsQuestion {
         width: 100%;
         padding-block: 20px;
+        margin-left: 8%;
     }
 
     .quiz1 {
         width: 100%;
-        margin-left: 60px;
+        height: 100%;
+        margin-bottom: 15%;
     }
 
     .numberQuestion {
@@ -845,13 +861,14 @@ a {
         padding-left: 0.3rem;
         align-items: center;
         grid-template-columns: 50% 50%;
+        margin-left: 8%;
     }
 
-   .rankHome {
+    .rankHome {
         height: 295px;
         width: 600px;
     }
-  
+
     .titleRankHome {
         width: 300px;
         height: 45px;
@@ -999,12 +1016,12 @@ a {
         grid-column: 1;
     }
 
-    .contactMessage{
+    .contactMessage {
         grid-row: 2;
         grid-column: 1 / span 2;
     }
 
-    .centerButton{
+    .centerButton {
         grid-row: 3;
         grid-column: 1 / span 2;
         height: 60px;
