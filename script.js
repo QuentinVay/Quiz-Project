@@ -19,6 +19,7 @@ let nameUser;
 let progressBar;
 let buttonsEnable;
 let endQuiz = false
+let progressBarBiere;
 
 function initialisationQuiz() {
   bodySectionQuiz.innerHTML = '';
@@ -28,7 +29,6 @@ function initialisationQuiz() {
   nombrepoints=0;
   endQuiz = false
   affichageRank.style.display="none";
-
   imgTrophy.style.display = "none";
   imgShame.style.display = "none";
 }
@@ -47,7 +47,6 @@ function createPastry(className) {
   element.style.animationDuration = Math.random() * 4 + 3 + "s";
   return element;
 }
-
 
 function showRank() {
   const affichageRank = document.getElementById('rankSelection');
@@ -90,7 +89,12 @@ let index = 0;
 function generateRandomAnswer(quention, choices, correctAnswer, fact) {
   compteur = index;
   index++;
-  let bodyQuiz = `<div class="quiz1 slidequiz" id="${index}">
+  let bodyQuiz = `
+  <div class="bodyContainBiere">
+  <div class="containTimerBiere"  id="blockBiereId${index}"></div>
+  <div class="glassbiere"></div>
+  </div>
+  <div class="quiz1 slidequiz" id="${index}">
   <div class="pictureQuestion">
       <div class="numberQuestion" id="numberid${index}">
           <div class="centerNumberQuestion">
@@ -115,19 +119,22 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
   </div>
   </div>`;
   bodySectionQuiz.innerHTML += bodyQuiz;
-  progressBar = document.getElementById(`idBarProgress${index}`);
 
+  progressBar = document.getElementById(`idBarProgress${index}`);
+  progressBarBiere= document.getElementById(`blockBiereId${index}`);
+  
+  const elementDelete = document.getElementById(`blockBiereId${compteur}`);
+  const animationQuiz = document.getElementById(compteur);
+  
   if (compteur > 0) {
-    const animationQuiz = document.getElementById(compteur);
     animationQuiz.classList.toggle("slidequiz");
+    elementDelete.remove();
   }
   compteur++;
 
   const element = document.getElementById(`${index}`);
-  console.log(element);
   if (!endQuiz){
     element.scrollIntoView();
-    console.log('scroll');
   }
   // addEventListener sur chaque button de réponse
   const verificationAnswer = document.getElementsByClassName(`answerChoice${index}`);
@@ -158,7 +165,6 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
   return arrayAnswerButton;
 };
 
-
 function disableButtons(buttons) {
   buttons.forEach(button => {
     button.style.pointerEvents = 'none';
@@ -184,6 +190,10 @@ function startChronometre(temps, buttons) {
     // Mettez à jour la largeur de la barre de progression en fonction du temps restant
     const progressWidth = 99 - (temps / 60) * 99; // 60 est la durée totale en secondes
     progressBar.style.width = progressWidth + '%';
+    
+    const progressWidthBiere = (temps / 60) * 448; // 60 est la durée totale en secondes
+    progressBarBiere.style.height = progressWidthBiere + 'px';
+    
   }, 1000);
 
   setTimeout(() => {
@@ -230,6 +240,15 @@ const bodyHome = document.querySelector(".home");
 
 playAgainButton.addEventListener("click", function () {
   // Affichez la section quiz quand on clique sur "retente ta chance".
+  console.log('click');
+  initialisationQuiz();
+  bodyHome.scrollIntoView();
+});
+const playAgainButtonDesktop = document.getElementById("playAgainButtonDesktop");
+
+playAgainButtonDesktop.addEventListener("click", function () {
+  // Affichez la section quiz quand on clique sur "retente ta chance".
+  console.log('click');
   initialisationQuiz();
   bodyHome.scrollIntoView();
 });
