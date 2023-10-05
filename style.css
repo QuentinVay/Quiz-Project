@@ -715,7 +715,6 @@ a {
     }
 
     .photoBridgeHome {
-        margin-top: 15px;
         max-width: 1280px;
         width: 1280px;
         cursor: url(/images/Rank/Chocolatine.png), auto;
@@ -743,7 +742,6 @@ a {
     .logoHome {
         z-index: 3;
         position: fixed;
-        margin-top: -10px;
         max-width: 50px;
     }
 
