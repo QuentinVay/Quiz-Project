@@ -22,9 +22,9 @@ body {
     max-width: 1440px;
 }
 
-.rank {
+/* .rank {
     display: none;
-}
+} */
 
 /* .contact {
     display: none;
@@ -230,9 +230,11 @@ body {
     margin-left: 4px;
 
 }
-.photoHome{
+
+.photoHome {
     position: relative;
 }
+
 .photoBridgeHome {
     display: block;
     margin: auto;
@@ -510,7 +512,7 @@ a {
     border-radius: 10px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     text-align: left;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 .rankOne {
@@ -518,10 +520,11 @@ a {
     height: 25%;
     display: flex;
     align-items: center;
+    margin-top: 5px;
 }
 
 .textRankOne {
-    margin: 10px;
+    margin: 20px;
 }
 
 .rankTwo {
@@ -532,7 +535,7 @@ a {
 }
 
 .textRankTwo {
-    margin: 10px;
+    margin: 20px;
 }
 
 .rankThree {
@@ -542,12 +545,24 @@ a {
     align-items: center;
 }
 
+.rankFiveFix {
+    display: none;
+}
+
 .rankFive {
     display: none;
 }
 
 .rankHome .textRankThree {
-    margin: 10px;
+    margin: 20px;
+}
+
+.rankFourFix {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    padding-left: 52px;
 }
 
 .rankFour {
@@ -555,7 +570,7 @@ a {
     height: 25%;
     display: flex;
     align-items: center;
-    padding-left: 42px;
+    padding-left: 52px;
 }
 
 .challengeFriends .playAgain {
@@ -837,9 +852,11 @@ a {
     .numberQuestion {
         left: 1%
     }
-.bodyquiz{
-    margin-top: 2rem;
-}
+
+    .bodyquiz {
+        margin-top: 2rem;
+    }
+
     .bodyquiz button {
         width: 90%;
     }
@@ -857,14 +874,8 @@ a {
     }
 
     .rankHome {
-        height: 295px;
+        height: 340px;
         width: 600px;
-    }
-
-    .titleRankHome {
-        width: 300px;
-        height: 45px;
-        align-items: center;
     }
 
     .bodyRankHome {
@@ -885,13 +896,26 @@ a {
         height: 20%;
     }
 
+    .rankFourFix {
+        height: 20%;
+    }
+
     .rankFour {
         height: 20%;
     }
 
     .rankFive {
         display: block;
-        padding-left: 42px;
+        padding-left: 52px;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .rankFiveFix {
+        display: block;
+        padding-left: 52px;
         height: 20%;
         display: flex;
         align-items: center;
@@ -933,10 +957,11 @@ a {
         grid-row: 1;
     }
 
-    .rank .rankHome .titleRankHome {
+    .titleRankHome {
         width: 380px;
         height: 60px;
         font-size: 30px;
+        align-items: center;
     }
 
     .titleShare {
@@ -958,7 +983,7 @@ a {
     }
 
     .challengeFriends .playAgain {
-        display: block;
+        display: grid;
         margin: auto;
         font-size: 35px;
         height: 60px;
@@ -979,7 +1004,6 @@ a {
     .containLogoReseaux * {
         width: 80px;
         height: 80px;
-        cursor: pointer;
         transition: transform 0.3s;
     }
 
