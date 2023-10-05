@@ -109,10 +109,12 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       <div class="imgBottonTimeProgress"></div>
   </div>
   <div class="detailsQuestion">${quention}</div>
+  <div class="Choice">
   <button class="answerChoice${index}">A) ${choices[0]}</button>
   <button class="answerChoice${index}">B) ${choices[1]}</button>
   <button class="answerChoice${index}">C) ${choices[2]}</button>
   <button class="answerChoice${index}">D) ${choices[3]}</button>
+  </div>
   </div>`;
   bodySectionQuiz.innerHTML += bodyQuiz;
   let progressBar = document.getElementById(`idBarProgress${index}`);

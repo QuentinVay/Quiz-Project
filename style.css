@@ -144,6 +144,14 @@ body {
     z-index: 3;
 }
 
+.Choice {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    align-items: center;
+
+}
+
 .detailsQuestion {
     width: 95%;
     max-width: 550px;
@@ -759,7 +767,7 @@ a {
         position: absolute;
         left: 3%;
         margin-top: 150px;
-        z-index: 2;
+        z-index: 1;
 
     }
 
@@ -792,19 +800,20 @@ a {
     }
 
     .pictureQuestion {
-        width: 900px;
-        height: 436px;
+        width: 850px;
+        height: 316px;
 
 
     }
 
     .pictureQuestion img {
-        max-height: 412px;
+        max-height: 292px;
     }
 
     .detailsQuestion {
         width: 100%;
         padding-block: 20px;
+
     }
 
     .quiz1 {
@@ -815,6 +824,24 @@ a {
     .numberQuestion {
         left: 1%
     }
+
+    .bodyquiz button {
+        width: 90%;
+    }
+
+    .Choice {
+        margin-top: 10px;
+        width: 95%;
+        max-width: 550px;
+        height: 100%;
+        display: grid;
+        grid-gap: 20px;
+        padding-left: 0.3rem;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+    }
+
+
 
 
 
