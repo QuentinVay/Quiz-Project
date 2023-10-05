@@ -10,9 +10,9 @@ let nombrepoints = 0;
 let nameUser;
 
 const startQuiz = document.querySelector('.buttonStartHome');
-startQuiz.addEventListener('click', ()=>{
+startQuiz.addEventListener('click', () => {
   // Demarrage du quiz init temps à 60s chronometre
- nameUser= document.getElementById('pseudo').value;
+  nameUser = document.getElementById('pseudo').value;
   startChronometre(tempsTimer);
   selectquestionquiz(questionsVariees);
 });
@@ -36,7 +36,7 @@ if (nombrepoints >= 100) {
 
     body.appendChild(elementLeft);
     body.appendChild(elementRight);
-    
+
     elementLeft.addEventListener("click", function () {
       elementLeft.remove();
     });
@@ -109,14 +109,16 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       <div class="imgBottonTimeProgress"></div>
   </div>
   <div class="detailsQuestion">${quention}</div>
+  <div class="Choice">
   <button class="answerChoice${index}">A) ${choices[0]}</button>
   <button class="answerChoice${index}">B) ${choices[1]}</button>
   <button class="answerChoice${index}">C) ${choices[2]}</button>
   <button class="answerChoice${index}">D) ${choices[3]}</button>
+  </div>
   </div>`;
   bodySectionQuiz.innerHTML += bodyQuiz;
   let progressBar = document.getElementById(`idBarProgress${index}`);
-  progressBar.style.width=tempsTimer*1.666666+'%';
+  progressBar.style.width = tempsTimer * 1.666666 + '%';
   if (compteur > 0) {
     const animationQuiz = document.getElementById(compteur);
     animationQuiz.classList.toggle("slidequiz");
@@ -152,17 +154,17 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
     });
   });
 
-  };
+};
 
 
 
 
 function startChronometre(temps) {
-  clearInterval(timeprogress); 
-  
+  clearInterval(timeprogress);
+
   timeprogress = setInterval(() => {
     temps--;
-  
+
     if (temps === 0) {
       clearInterval(timeprogress);
       tempsTimer = 0;
@@ -182,7 +184,7 @@ function selectquestionquiz(tableauquestion) {
 
   // vérifier si il reste encore du temps sinon afficher la page classement avec nombre de points réalisé
 
-  if (tempsTimer!==0){
+  if (tempsTimer !== 0) {
 
     let randomIndex = Math.floor(Math.random() * tableauquestion.length);
     const { question, choices, correctAnswer, fact } =
@@ -195,7 +197,7 @@ function selectquestionquiz(tableauquestion) {
     // affichage page classements
     const affichageRank = document.getElementById('rankSelection');
     const affichageScoreRank = document.querySelector('.detailsRankUserName');
-    affichageScoreRank.innerHTML=`<p>Félicitations ${nameUser} tu fais partie de la team chocolatine ! ton score est de :${nombrepoints}</p> `
+    affichageScoreRank.innerHTML = `<p>Félicitations ${nameUser} tu fais partie de la team chocolatine ! ton score est de :${nombrepoints}</p> `
     affichageRank.classList.toggle("visible");
     affichageRank.scrollIntoView();
   }
@@ -208,6 +210,18 @@ const aboutLq = document.querySelector('.aboutPhotoHomea');
 aboutQ.addEventListener('click', function () {
   aboutLq.classList.toggle("visible")
 })
+
+let navbarH = document.querySelector('.navBarFloatting');
+const NavbarNotH = document.querySelector('.navBarHidden');
+let burgerM = document.querySelector('.burgermenu')
+
+navbarH.addEventListener('click', function () {
+  NavbarNotH.classList.toggle("visible"),
+    burgerM.classList.toggle('tester')
+})
+
+
+
 
 const playAgainButton = document.getElementById("playAgainButton");
 const quizSection = document.querySelector(".bodyquiz");
