@@ -18,14 +18,9 @@
             <span></span>
             <span></span>
         </div>
-        <!-- <nav class="navBarVissible">
-            <div class="logoNavBar"></div>
-            <div class="burgerNavBarOpen"></div>
-        </nav> -->
         <nav class="navBarHidden">
             <ul class="listNavBar">
                 <li class="home"><a href="#home">Accueil</a></li>
-                <!-- <li class="quiz"></li> -->
                 <li class="contactNav"><a href="#contactSelection">Contact</a></li>
             </ul>
             <div class="burgerNavBarClose"></div>
@@ -39,8 +34,11 @@
             <img class="photoBridgeHome" src="images\Acueil\PontsaintpierreAccueil.png"
                 alt="Photo magnifique du pont saint pierre dans la superbe ville de Toulouse">
             <div class="aboutPhotoHome">?</div>
-            <div class="aboutPhotoHomea">Le pont Saint-Pierre à 160 ans, pendant cette longue vie il a été reconstruit 3
-                fois. Sa traversée a été payante jusqu'en 1904 par une société privée.</div>
+            <div class="aboutPhotoHomea">
+                <p class="titleSaviezVous">Le saviez vous?</p> Le pont Saint-Pierre à 160 ans, pendant cette longue vie
+                il a été reconstruit 3
+                fois. Sa traversée a été payante jusqu'en 1904 par une société privée.
+            </div>
             <div class="welcomeHome">
                 <h1 class="titleHome">Bienvenue au chocoquiz de Toulouse!</h1>
                 <div class="detailsWelcomeHome">
@@ -72,31 +70,31 @@
                                 <p>Quentin: 998 pts</p>
                             </div>
                         </div>
-                        <div class="rankFour">
+                        <div class="rankFourFix">
                             <p>Sacha : 500 pts</p>
                         </div>
-                        <div class="rankFive">
-                            <p>Panda : 150 pts</p>
+                        <div class="rankFiveFix">
+                            <p>PandaMignon : 70 pts</p>
                         </div>
                     </div>
                 </div>
-              
-            <div class="startHome">
-                <div class="textHidden">
-                    <h1>Bienvenue au chocoquiz de Toulouse!</h1>
-                    <p>Découvrez le quiz exclusif qui vous permettra à la fois d'enrichir vos connaissances, de vous
-                        divertir et de déterminer si vous êtes véritablement un Toulousain authentique !</p>
-                </div>
-                <div class="titleStartHome">Rentre ton Pseudo!</div>
-                <div class="nameInput">
-                    <input type="text" id="pseudo" name="name" required minlength="3" maxlength="18" size="18" />
-                    <img class="imgChrono" src="/images/Acueil/Chronometre.png">
-                </div>
-                <div class="imgChronoStartHome"></div>
-                <img class="mascotte" src="/images/Acueil/mascotte-Toulouse-_modifier-removebg-preview.png" >
-                <img class="drapeau" src="/images/Acueil/image_12-removebg-preview.png">               
-                <button class="buttonStartHome">Commence le Quiz!!</button>
-                
+
+                <div class="startHome">
+                    <div class="textHidden">
+                        <h1>Bienvenue au chocoquiz de Toulouse!</h1>
+                        <p>Découvrez le quiz exclusif qui vous permettra à la fois d'enrichir vos connaissances, de vous
+                            divertir et de déterminer si vous êtes véritablement un Toulousain authentique !</p>
+                    </div>
+                    <div class="titleStartHome">Rentre ton Pseudo!</div>
+                    <div class="nameInput">
+                        <input type="text" id="pseudo" name="name" required minlength="3" maxlength="18" size="18" />
+                        <img class="imgChrono" src="/images/Acueil/Chronometre.png">
+                    </div>
+                    <div class="imgChronoStartHome"></div>
+                    <img class="mascotte" src="/images/Acueil/mascotte-Toulouse-_modifier-removebg-preview.png">
+                    <img class="drapeau" src="/images/Acueil/image_12-removebg-preview.png">
+                    <button class="buttonStartHome">Commence le Quiz!!</button>
+
 
                 </div>
             </div>
@@ -159,10 +157,10 @@
                     </div>
                 </div>
                 <div class="rankFour">
-                    <p>User name : x pts</p>
+                    <p>Sacha : 500 pts</p>
                 </div>
                 <div class="rankFive">
-                    <p>Panda : 150 pts</p>
+                    <p>PandaMignon : 70 pts</p>
                 </div>
             </div>
         </div>
@@ -188,6 +186,7 @@
             </div>
         </div>
     </section>
+    <!-- Fin de section rank -->
 
     <section class="contact" id="contactSelection">
         <div class="contactForm">
@@ -218,6 +217,8 @@
             </form>
         </div>
     </section>
+    <!-- Fin de section contact -->
+
     <script type="module" src="script.js"></script>
 
 </body>
