@@ -138,7 +138,7 @@ const questionsVariees = [
     choices: ["Jules Verne", "H.G. Wells", "Isaac Asimov", "Philip K. Dick"],
     correctAnswer: "Jules Verne",
     fact: "Jules Verne, l'auteur de 'Vingt Mille Lieues sous les mers' et 'Le Tour du monde en quatre-vingts jours', est né à Toulouse et est une figure majeure de la littérature d'aventure.",
-    /imgQ: "./images/Quiz/pRoman.jpg"
+    imgQ: "./images/Quiz/pRoman.jpg"
   },
   {
     question: "21. Quel célèbre peintre français, connu pour ses œuvres impressionnistes, a passé du temps à Toulouse et a peint des scènes de la ville ?",
@@ -173,7 +173,7 @@ const questionsVariees = [
     choices: ["Place de la Bourse", "Place Saint-Georges", "Place du Capitole", "Place de la Trinité"],
     correctAnswer: "Place du Capitole",
     fact: "La Place du Capitole est l'une des places les plus emblématiques de Toulouse, abritant l'hôtel de ville et servant de lieu central pour de nombreuses manifestations culturelles et festivités.",
-    imgQ: = "./images/Quiz/quiz1desktop.jfif"
+    imgQ: "./images/Quiz/quiz1desktop.jfif"
   }
 ];
 export default questionsVariees;
