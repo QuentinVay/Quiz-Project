@@ -22,13 +22,13 @@ body {
     max-width: 1440px;
 }
 
-/* .rank {
+.rank {
     display: none;
-} */
+}
 
-/* .contact {
+.contact {
     display: none;
-} */
+}
 
 .quiz1 {
     display: flex;

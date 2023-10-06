@@ -1,7 +1,7 @@
 const questionsVariees = [
     {
       question: "1. Quel plat traditionnel toulousain est fait à base de viande de canard, de saucisse de Toulouse et de haricots blancs ?",
-      choices: ["Cassoulet", "Ratatouille", "Bouillabaisse", "Coq au Vin"],
+      choices: ["Cassoulet", "Ratatouille", "Bouillabaisse", "Canard à l'hélium"],
       correctAnswer: "Cassoulet",
       fact: "Le cassoulet est un plat emblématique de la région de Toulouse, connu pour être un plat réconfortant et copieux."
     },
@@ -31,13 +31,13 @@ const questionsVariees = [
     },
     {
       question: "6. Quel monument emblématique de Toulouse est surnommé 'Le Bazacle' et est un ancien moulin à eau sur la Garonne ?",
-      choices: ["La Basilique Saint-Sernin", "Le Capitole", "La Cité de l'Espace", "La Halle aux Grains"],
+      choices: ["La Basilique Saint-Sernin", "Le Capitole", "La Wild Code School", "La Halle aux Grains"],
       correctAnswer: "La Basilique Saint-Sernin",
       fact: "La Basilique Saint-Sernin est le plus grand édifice roman en Europe et est souvent surnommée 'Le Bazacle' en référence à son histoire."
     },
     {
       question: "7. Quelle équipe de rugby toulousaine est l'une des plus titrées en France et en Europe ?",
-      choices: ["Toulouse Football Club", "Toulouse Olympique", "Stade Toulousain", "Toulouse Racing Club"],
+      choices: ["Toulouse Football Club", "Toulouse Pétanque Club", "Stade Toulousain", "Toulouse Racing Club"],
       correctAnswer: "Stade Toulousain",
       fact: "Le Stade Toulousain est un club de rugby à XV basé à Toulouse, et il est l'un des clubs les plus prestigieux et titrés en Europe."
     },
@@ -61,7 +61,7 @@ const questionsVariees = [
     },
     {
       question: "11. Quelle équipe de football toulousaine a évolué en Ligue 1 et a souvent été surnommée 'Le Téfécé' ?",
-      choices: ["Toulouse Football Club", "Toulouse Olympique", "Stade Toulousain", "Toulouse Racing Club"],
+      choices: ["Toulouse Futur Club", "Toulouse Olympique", "Stade Toulousain", "Toulouse Football Club"],
       correctAnswer: "Toulouse Football Club",
       fact: "Le Toulouse Football Club, souvent surnommé 'Le Téfécé', est un club de football professionnel basé à Toulouse."
     },
@@ -72,16 +72,16 @@ const questionsVariees = [
       fact: "Louis-Ferdinand Céline, l'auteur de 'Voyage au bout de la nuit', est né à Toulouse en 1894 et a marqué la littérature française du 20e siècle."
     },
     {
-      question: "13. Quelle fête traditionnelle toulousaine se déroule chaque année en septembre et met en avant la gastronomie locale, en particulier la saucisse de Toulouse ?",
+      question: "13. Quelle fête traditionnelle toulousaine se déroule chaque année en septembre et met en avant la gastronomie locale ?",
       choices: ["La Fête de la Musique", "Le Festival International de Jazz", "La Fête de la Science", "La Fête de la Saucisse"],
       correctAnswer: "La Fête de la Saucisse",
       fact: "La Fête de la Saucisse est une célébration de la gastronomie locale à Toulouse, mettant en avant la fameuse saucisse de Toulouse."
     },
     {
-      question: "14. Quel célèbre scientifique et mathématicien français, inventeur de la machine à calculer mécanique, est né à Toulouse en 1623 ?",
-      choices: ["Blaise Pascal", "René Descartes", "Pierre-Simon Laplace", "Évariste Galois"],
-      correctAnswer: "Blaise Pascal",
-      fact: "Blaise Pascal, né à Clermont-Ferrand et ayant passé une partie de sa vie à Toulouse, était un polymathe connu pour ses contributions aux mathématiques, à la physique et à la philosophie."
+      question: "14. Quel est le nom de cette viénoiserie ?",
+      choices: ["Une chocolatine", "Une chocolatine", "Une chocolatine", "Une chocolatine"],
+      correctAnswer: "Une chocolatine",
+      fact: "Une chocolatine."
     },
     {
       question: "15. Quelle célèbre compagnie aéronautique européenne a son siège social à Toulouse et est connue pour la fabrication d'avions civils ?",
@@ -97,7 +97,7 @@ const questionsVariees = [
     },
     {
       question: "17. Quel événement sportif annuel à Toulouse attire des passionnés de cyclisme du monde entier et propose un parcours montagneux ?",
-      choices: ["Tour de France", "Tour d'Italie", "Tour d'Espagne", "Paris-Roubaix"],
+      choices: ["Tour de France", "Tour du Monde", "Tour d'Espagne", "Paris-Roubaix"],
       correctAnswer: "Tour de France",
       fact: "Le Tour de France, l'une des courses cyclistes les plus prestigieuses au monde, passe régulièrement par Toulouse et offre des étapes montagneuses spectaculaires."
     },
@@ -109,7 +109,7 @@ const questionsVariees = [
     },
     {
       question: "19. Quelle rivière traverse la ville de Toulouse avant de se jeter dans la Méditerranée ?",
-      choices: ["Le Rhin", "La Seine", "La Garonne", "Le Danube"],
+      choices: ["La Méditerranée", "La Seine", "La Garonne", "Le Danube"],
       correctAnswer: "La Garonne",
       fact: "La Garonne est une importante rivière qui traverse Toulouse et se jette dans la mer Méditerranée, influençant la géographie de la région."
     },
