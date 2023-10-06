@@ -1197,4 +1197,8 @@ a {
         position: relative;
     }
 
+    .detailsQuestion {
+        font-weight: bold;
+    }
+
 }
