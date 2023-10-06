@@ -70,7 +70,7 @@ function showRank() {
   
   // const rankFourElement = document.querySelector(".rankFour");
   // const pseudoInput = document.getElementById("pseudo");
-  // // mise à jour le texte de l'élément "rankFour" avec la valeur de l'input "pseudo" et la valeur de la variable "nombrepoints"
+  // // mise à jour le texte de l'élément "rankFourFix" avec la valeur de l'input "pseudo" et la valeur de la variable "nombrepoints"
   // rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
 
   function createPastryAndHandleClick(className) {
@@ -148,7 +148,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
       // compter le nombre de points
       if (choices[buttonIndex] === correctAnswer) {
         element.style.border = "4px solid green";
-        nombrepoints += 100;
+        nombrepoints += 10;
       } else {
         element.style.border = "4px solid red";
       }
