@@ -26,9 +26,9 @@ function initialisationQuiz() {
   tempsTimer = 60;
   compteur = 0;
   index = 0;
-  nombrepoints=0;
+  nombrepoints = 0;
   endQuiz = false
-  affichageRank.style.display="none";
+  affichageRank.style.display = "none";
   imgTrophy.style.display = "none";
   imgShame.style.display = "none";
 }
@@ -61,13 +61,13 @@ function showRank() {
     // Cas où nombrepoints est inférieur à 100 (team pain au chocolat)
     tempsTimer = 60;
     affichageScoreRank.innerHTML = `<p>Désolé ${nameUser} tu fais partie de la team pain au chocolat! ton score est de :${nombrepoints}</p>`;
-    imgShame.style.display = "block";lolm
+    imgShame.style.display = "block"; lolm
   }
   setTimeout(() => {
     affichageRank.style.display = "grid";
     affichageRank.scrollIntoView();
   }, 2000);
-  
+
   // const rankFourElement = document.querySelector(".rankFour");
   // const pseudoInput = document.getElementById("pseudo");
   // // mise à jour le texte de l'élément "rankFourFix" avec la valeur de l'input "pseudo" et la valeur de la variable "nombrepoints"
@@ -121,11 +121,11 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
   bodySectionQuiz.innerHTML += bodyQuiz;
 
   progressBar = document.getElementById(`idBarProgress${index}`);
-  progressBarBiere= document.getElementById(`blockBiereId${index}`);
-  
+  progressBarBiere = document.getElementById(`blockBiereId${index}`);
+
   const elementDelete = document.getElementById(`blockBiereId${compteur}`);
   const animationQuiz = document.getElementById(compteur);
-  
+
   if (compteur > 0) {
     animationQuiz.classList.toggle("slidequiz");
     elementDelete.remove();
@@ -133,7 +133,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact) {
   compteur++;
 
   const element = document.getElementById(`${index}`);
-  if (!endQuiz){
+  if (!endQuiz) {
     element.scrollIntoView();
   }
   // addEventListener sur chaque button de réponse
@@ -190,10 +190,10 @@ function startChronometre(temps, buttons) {
     // Mettez à jour la largeur de la barre de progression en fonction du temps restant
     const progressWidth = 99 - (temps / 60) * 99; // 60 est la durée totale en secondes
     progressBar.style.width = progressWidth + '%';
-    
+
     const progressWidthBiere = (temps / 60) * 448; // 60 est la durée totale en secondes
     progressBarBiere.style.height = progressWidthBiere + 'px';
-    
+
   }, 1000);
 
   setTimeout(() => {

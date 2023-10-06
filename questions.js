@@ -72,7 +72,7 @@ const questionsVariees = [
   },
   {
     question: "11. Quelle équipe de football toulousaine a évolué en Ligue 1 et a souvent été surnommée 'Le Téfécé' ?",
-    choices: ["Toulouse Futur Club", "Toulouse Olympique", "Stade Toulousain", "Toulouse Racing Club"],
+    choices: ["Toulouse Futur Club", "Toulouse Football Club", "Stade Toulousain", "Toulouse Racing Club"],
     correctAnswer: "Toulouse Football Club",
     fact: "Le Toulouse Football Club, souvent surnommé 'Le Téfécé', est un club de football professionnel basé à Toulouse.",
     imgQ: "./images/Quiz/pFoot.jpg"
