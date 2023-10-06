@@ -9,7 +9,8 @@ const questionsVariees = [
       question: "2. Quel célèbre peintre impressionniste français a réalisé des tableaux de Toulouse, notamment du Pont Neuf ?",
       choices: ["Vincent van Gogh", "Claude Monet", "Paul Cézanne", "Pierre-Auguste Renoir"],
       correctAnswer: "Claude Monet",
-      fact: "Claude Monet a peint plusieurs toiles du Pont Neuf à Toulouse pendant son séjour dans la ville en 1875."
+      fact: "Claude Monet a peint plusieurs toiles du Pont Neuf à Toulouse pendant son séjour dans la ville en 1875.",
+      imgQ: "./images/Quiz/Photo1.png"
     },
     {
       question: "3. Quel grand événement aéronautique se tient tous les deux ans à Toulouse, mettant en avant l'industrie aérospatiale ?",
