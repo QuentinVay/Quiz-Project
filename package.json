@@ -1,0 +1,16 @@
+{
+  "name": "quiz-project",
+  "version": "1.0.0",
+  "description": "Pensez à pull avant de commencer à travailler sur le projet Teste",
+  "main": "questions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "html-validator index.html '--ignore=Trailing slash on void elements'"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "w3c-html-validator": "^1.5.1"
+  }
+}
