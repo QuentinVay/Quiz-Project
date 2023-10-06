@@ -30,9 +30,9 @@ function initialisationQuiz() {
   tempsTimer = 60;
   compteur = 0;
   index = 0;
-  nombrepoints=0;
+  nombrepoints = 0;
   endQuiz = false
-  affichageRank.style.display="none";
+  affichageRank.style.display = "none";
   imgTrophy.style.display = "none";
   imgShame.style.display = "none";
   asideTimer.style.display='none';
@@ -71,12 +71,12 @@ function showRank() {
     tempsTimer = 60;
     affichageScoreRank.innerHTML = `<p>Désolé ${nameUser} tu fais partie de la team pain au chocolat! ton score est de :${nombrepoints}</p>`;
     imgShame.style.display = "block";
+
   }
   setTimeout(() => {
     affichageRank.style.display = "grid";
     affichageRank.scrollIntoView();
   }, 2000);
-  
 
   function createPastryAndHandleClick(className) {
     const element = createPastry(className);
@@ -91,7 +91,8 @@ function showRank() {
 let compteur;
 let index = 0;
 
-function generateRandomAnswer(quention, choices, correctAnswer, fact, img) {
+
+function generateRandomAnswer(quention, choices, correctAnswer, fact, imgQ) {
   compteur = index;
   index++;
   let bodyQuiz = `
@@ -103,7 +104,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact, img) {
             </div>
         </div>
         <div class="img ">
-            <img src="./images/Quiz/Photo1.png" alt="">
+            <img src="${imgQ}" alt="">
         </div>
     </div>
     <div class="barTimeProgress" id="barTimeId${index}" >
@@ -128,6 +129,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact, img) {
   const animationQuiz = document.getElementById(compteur);
   detectWindowSize(showProgressBar);
   
+
   if (compteur > 0) {
     animationQuiz.classList.toggle("slidequiz");
   }
@@ -159,7 +161,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact, img) {
       // compter le nombre de points
       if (choices[buttonIndex] === correctAnswer) {
         element.style.border = "4px solid green";
-        nombrepoints += 100;
+        nombrepoints += 10;
       } else {
         element.style.border = "4px solid red";
       }
@@ -213,8 +215,6 @@ function startChronometre(temps, buttons) {
       showRank();
       disableButtons(buttons); // Désactiver les boutons lorsque le temps est écoulé
     }
-    
-    
   }, 1000);
   
   const timeoutId = setTimeout(() => {
@@ -230,6 +230,7 @@ function startChronometre(temps, buttons) {
 
 let borderValue = 0; 
 
+
 // Fonction pour mettre à jour le borderTop
 function updateBorderTop(temps) {
   // Mettez à jour la largeur de la barre de progression en fonction du temps restant
@@ -241,6 +242,14 @@ function updateBorderTop(temps) {
   
   borderValue += 0.5; // Augmentez la valeur de 0.5px
   progressBarBiere.style.borderTop = borderValue + "px solid whitesmoke";
+  let randomIndex = Math.floor(Math.random() * tableauquestion.length);
+  const { question, choices, correctAnswer, fact, imgQ } =
+    tableauquestion[randomIndex];
+  // supprimer la question du tableau afin de ne pas repeter la question
+  tableauquestion.splice(randomIndex, 1);
+  // afficher la question, stocker la bonne reponse dans une variable
+  return generateRandomAnswer(question, choices, correctAnswer, fact, imgQ);
+
 }
 
 // Démarrez un setInterval pour appeler la fonction de mise à jour toutes les 10 secondes
