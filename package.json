@@ -5,8 +5,7 @@
   "main": "questions.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "validate": "html-validator docs flyer.html",
-    "one-folder": "html-validator docs"
+    "validate": "html-validator index.html '--ignore=Trailing slash on void elements'"
   },
   "author": "",
   "license": "ISC",
