@@ -7,7 +7,7 @@ const questionsVariees = [
     },
     {
       question: "2. Quel célèbre peintre impressionniste français a réalisé des tableaux de Toulouse, notamment du Pont Neuf ?",
-      choices: ["Vincent van Gogh", "Claude Monet", "Paul Cézanne", "Pierre-Auguste Renoir"],
+      choices: ["Vincent van Gogh", "Claude Monet", "Paul Cézanne", "Vincent Lagaf"],
       correctAnswer: "Claude Monet",
       fact: "Claude Monet a peint plusieurs toiles du Pont Neuf à Toulouse pendant son séjour dans la ville en 1875."
     },
@@ -25,7 +25,7 @@ const questionsVariees = [
     },
     {
       question: "5. Quel est le nom du célèbre festival musical qui se déroule chaque été dans la ville de Toulouse et attire des artistes internationaux ?",
-      choices: ["Toulouse Jazz Festival", "Toulouse Music Festival", "Rio Loco", "Toulouse Rock Fest"],
+      choices: ["Coachella", "Toulouse Music Festival", "Rio Loco", "Toulouse Rock Fest"],
       correctAnswer: "Rio Loco",
       fact: "Rio Loco est un festival de musique du monde qui se tient sur les berges de la Garonne à Toulouse et met en avant la diversité musicale."
     },
@@ -43,7 +43,7 @@ const questionsVariees = [
     },
     {
       question: "8. Quelle rue de Toulouse est célèbre pour ses boutiques de joaillerie et de luxe, en faisant une destination de shopping prisée ?",
-      choices: ["Rue du Taur", "Rue de la Bourse", "Rue Saint-Rome", "Rue Alsace-Lorraine"],
+      choices: ["Rue des Boutiques", "Rue de la Bourse", "Rue Saint-Rome", "Rue Alsace-Lorraine"],
       correctAnswer: "Rue Saint-Rome",
       fact: "La Rue Saint-Rome est connue pour ses nombreuses boutiques de mode et de luxe, en particulier pour la joaillerie et les marques de luxe."
     },
@@ -55,7 +55,7 @@ const questionsVariees = [
     },
     {
       question: "10. Quel est le nom du canal qui relie Toulouse à la mer Méditerranée et qui est célèbre pour ses écluses et son itinéraire pittoresque ?",
-      choices: ["Canal de l'Ourcq", "Canal de Bourgogne", "Canal du Midi", "Canal de Garonne"],
+      choices: ["Canal de l'Ourcq", "Canal Plus", "Canal du Midi", "Canal de Garonne"],
       correctAnswer: "Canal du Midi",
       fact: "Le Canal du Midi est un site classé au patrimoine mondial de l'UNESCO et offre un magnifique itinéraire navigable à travers la région Occitanie."
     },
@@ -73,7 +73,7 @@ const questionsVariees = [
     },
     {
       question: "13. Quelle fête traditionnelle toulousaine se déroule chaque année en septembre et met en avant la gastronomie locale ?",
-      choices: ["La Fête de la Musique", "Le Festival International de Jazz", "La Fête de la Science", "La Fête de la Saucisse"],
+      choices: ["La Fête des Chocolatines", "Le Festival International de Jazz", "La Fête de la Science", "La Fête de la Saucisse"],
       correctAnswer: "La Fête de la Saucisse",
       fact: "La Fête de la Saucisse est une célébration de la gastronomie locale à Toulouse, mettant en avant la fameuse saucisse de Toulouse."
     },
@@ -85,7 +85,7 @@ const questionsVariees = [
     },
     {
       question: "15. Quelle célèbre compagnie aéronautique européenne a son siège social à Toulouse et est connue pour la fabrication d'avions civils ?",
-      choices: ["Air France", "Boeing", "Airbus", "Embraer"],
+      choices: ["Air France", "Boeing", "Airbus", "Ferrari"],
       correctAnswer: "Airbus",
       fact: "Airbus, l'un des principaux fabricants d'avions civils au monde, a son siège social à Toulouse, ce qui en fait un centre majeur de l'industrie aérospatiale."
     },
