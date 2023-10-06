@@ -63,7 +63,7 @@ const questionsVariees = [
     imgQ: "./images/Quiz/pJapon.jpg"
   },
   {
-    question: "1Quel est le nom du canal qui relie Toulouse à la mer Méditerranée et qui est célèbre pour ses écluses et son itinéraire pittoresque ?",
+    question: "Quel est le nom du canal qui relie Toulouse à la mer Méditerranée et qui est célèbre pour ses écluses et son itinéraire pittoresque ?",
     choices: ["Canal de l'Ourcq", "Canal Plus", "Canal du Midi", "Canal de Garonne"],
     correctAnswer: "Canal du Midi",
     fact: "Le Canal du Midi est un site classé au patrimoine mondial de l'UNESCO et offre un magnifique itinéraire navigable à travers la région Occitanie.",

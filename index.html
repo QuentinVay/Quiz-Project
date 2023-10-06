@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <section class="navBarFloatting">
+    <div class="navBarFloatting">
         <div class="burgermenu">
             <span></span>
             <span></span>
@@ -25,13 +25,13 @@
             </ul>
             <div class="burgerNavBarClose"></div>
         </nav>
-    </section>
+    </div>
 
     <section class="home" id="home">
 
         <div class="photoHome">
             <img class="logoHome" src="/images/Acueil/image-Logo.png" alt="Logo quiz">
-            <img class="photoBridgeHome" src="images\Acueil\PontsaintpierreAccueil.png"
+            <img class="photoBridgeHome" src="images/Acueil/PontsaintpierreAccueil.png"
                 alt="Photo magnifique du pont saint pierre dans la superbe ville de Toulouse">
             <div class="aboutPhotoHome">?</div>
             <div class="aboutPhotoHomea">
@@ -88,21 +88,23 @@
                     <div class="titleStartHome">Rentre ton Pseudo!</div>
                     <div class="nameInput">
                         <input type="text" id="pseudo" name="name" required minlength="3" maxlength="18" size="18" />
-                        <img class="imgChrono" src="/images/Acueil/Chronometre.png">
+                        <img class="imgChrono" src="/images/Acueil/Chronometre.png" alt="Image de Chronometre">
                     </div>
                     <div class="imgChronoStartHome"></div>
-                    <img class="mascotte" src="/images/Acueil/mascotte-Toulouse-_modifier-removebg-preview.png">
-                    <img class="drapeau" src="/images/Acueil/image_12-removebg-preview.png">
+                    <img class="mascotte" src="/images/Acueil/mascotte-Toulouse-_modifier-removebg-preview.png"
+                        alt="Image de mascotte">
+                    <img class="drapeau" src="/images/Acueil/image_12-removebg-preview.png" alt="Image de drapeau">
                     <button class="buttonStartHome">Commence le Quiz!!</button>
 
 
                 </div>
             </div>
+        </div>
     </section>
     <!-- Fin de section Home -->
 
-
     <section class="bodyquiz">
+
         <aside>
             <div class="bodyContainBiere">
                 <div class="containTimerBiere"></div>
@@ -200,17 +202,17 @@
                 <div class="contactDesktop">
                     <div class="contactFirstName">
                         <p>Prenom</p>
-                        <label for="" class="firstName"></label>
+                        <label class="firstName"></label>
                         <input type="text" class="inputFirstName">
                     </div>
                     <div class="contactName">
                         <p>Nom</p>
-                        <label for="" class="lastName"></label>
+                        <label class="lastName"></label>
                         <input type="text" class="inputLastName">
                     </div>
                     <div class="contactMessage">
                         <p>Message</p>
-                        <label for="" class="MessageContact"></label>
+                        <label class="MessageContact"></label>
                         <textarea class="inputMessage" name="message" id="message" required></textarea>
                     </div>
                     <div class="centerButton">

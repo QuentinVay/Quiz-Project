@@ -23,9 +23,14 @@ body {
     max-width: 1440px;
 }
 
-.rank {
+/* .rank {
     display: none;
-}
+} */
+
+
+/* .contact {
+    display: none;
+} */
 
 /* en cours de developpement ne pas toucher svp */
 aside {
@@ -65,7 +70,6 @@ main {
     width: 60px;
     height: 100%;
     border-radius: 10px 10px 0 0;
-
     background: rgba(142, 107, 107, 0.263);
     z-index: 0;
 }
