@@ -71,7 +71,6 @@ function showRank() {
     tempsTimer = 60;
     affichageScoreRank.innerHTML = `<p>Désolé ${nameUser} tu fais partie de la team pain au chocolat! ton score est de :${nombrepoints}</p>`;
     imgShame.style.display = "block";
-
   }
   setTimeout(() => {
     affichageRank.style.display = "grid";
@@ -123,12 +122,12 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact, imgQ) {
   bodySectionQuiz.innerHTML += bodyQuiz;
 
   progressBar = document.getElementById(`idBarProgress${index}`);
+
   const showProgressBar = document.getElementById(`barTimeId${index}`);
   tempTimeProgress=showProgressBar;
   // const elementDelete = document.getElementById(`blockBiereId${compteur}`);
   const animationQuiz = document.getElementById(compteur);
   detectWindowSize(showProgressBar);
-  
 
   if (compteur > 0) {
     animationQuiz.classList.toggle("slidequiz");
@@ -365,6 +364,7 @@ if (nombrepoints < 70) {
   // Insérez .rankFive avant .rankFour pour les échanger de place
   rankFour.parentNode.insertBefore(rankFive, rankFour);
 }
+
 // **********************Function pour ajuster l'affichage *******************************
 function ajusterBottomAside() {
   const mainAfter = document.querySelector("main::after");
@@ -394,3 +394,4 @@ console.log(tempTimeProgress);
 window.addEventListener("resize",()=>{
   detectWindowSize(tempTimeProgress) ;
 } );
+
