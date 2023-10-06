@@ -1,5 +1,4 @@
 const questionsVariees = [
-
   {
     question: "1. Quel plat traditionnel toulousain est fait à base de viande de canard, de saucisse de Toulouse et de haricots blancs ?",
     choices: ["Cassoulet", "Ratatouille", "Bouillabaisse", "Canard à l'hélium"],
@@ -177,3 +176,4 @@ const questionsVariees = [
   }
 ];
 export default questionsVariees;
+
