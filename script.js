@@ -242,13 +242,6 @@ function updateBorderTop(temps) {
   
   borderValue += 0.5; // Augmentez la valeur de 0.5px
   progressBarBiere.style.borderTop = borderValue + "px solid whitesmoke";
-  let randomIndex = Math.floor(Math.random() * tableauquestion.length);
-  const { question, choices, correctAnswer, fact, imgQ } =
-    tableauquestion[randomIndex];
-  // supprimer la question du tableau afin de ne pas repeter la question
-  tableauquestion.splice(randomIndex, 1);
-  // afficher la question, stocker la bonne reponse dans une variable
-  return generateRandomAnswer(question, choices, correctAnswer, fact, imgQ);
 
 }
 
@@ -288,14 +281,14 @@ function selectquestionquiz(tableauquestion) {
   }
   
   let randomIndex = Math.floor(Math.random() * tableauCopie.length);
-  const { question, choices, correctAnswer, fact } =
-    tableauCopie[randomIndex];
+  const { question, choices, correctAnswer, fact, imgQ } =
+    tableauquestion[randomIndex];
     
     // Supprimer la question de la copie du tableau afin de ne pas la répéter
     tableauCopie.splice(randomIndex, 1);
     
     // Afficher la question, stocker la bonne réponse dans une variable
-    return generateRandomAnswer(question, choices, correctAnswer, fact);
+    return generateRandomAnswer(question, choices, correctAnswer, fact, imgQ);
   }
   
   let aboutQ = document.querySelector('.aboutPhotoHome');
