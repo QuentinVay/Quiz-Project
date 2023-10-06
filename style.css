@@ -32,7 +32,7 @@ body {
 
 /* en cours de developpement ne pas toucher svp */
 
-.bodyContainBiere{
+.bodyContainBiere {
     position: absolute;
     left: 12%;
     bottom: 60px;
@@ -46,84 +46,97 @@ body {
     border: 2px solid rgba(0, 0, 0, 1);
     z-index: 4;
 }
-.fondbiere{
+
+.fondbiere {
     position: absolute;
     left: 3px;
-    bottom:0;
+    bottom: 0;
     width: 60px;
-    height: 100%;    
+    height: 100%;
     border-radius: 10px;
     background: rgba(142, 107, 107, 0.263);
     z-index: 0;
 }
-.glassbiere{
+
+.glassbiere {
     position: absolute;
     left: 1px;
-    bottom:0;
+    bottom: 0;
     width: 65px;
     height: 100%;
     z-index: 2;
-background: rgba(255, 254, 254, 0.26);
-border-radius: 10px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5.9px);
--webkit-backdrop-filter: blur(5.9px);
+    background: rgba(255, 254, 254, 0.26);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.9px);
+    -webkit-backdrop-filter: blur(5.9px);
 }
-.bulles{
+
+.bulles {
     position: absolute;
     background: rgb(236, 236, 213);
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    z-index: 2;  
-}
-#b1{
-    left: 10px;
-    bottom:110px;
-}
-#b2{
-    left: 25px;
-    bottom:50px;
-}
-#b3{
-    left: 25px;
-    bottom:160px;
-}
-#b4{
-    left: 25px;
-    bottom:220px;
-}
-#b5{
-    left: 45px;
-    bottom:340px;   
-}
-#b6{
-    left: 40px;
-    bottom:250px;
-}
-#b7{
-    left: 25px;
-    bottom:290px;
-}
-#b8{
-    left: 35px;
-    bottom:380px;
+    z-index: 2;
 }
 
-.containTimerBiere{
+#b1 {
+    left: 10px;
+    bottom: 110px;
+}
+
+#b2 {
+    left: 25px;
+    bottom: 50px;
+}
+
+#b3 {
+    left: 25px;
+    bottom: 160px;
+}
+
+#b4 {
+    left: 25px;
+    bottom: 220px;
+}
+
+#b5 {
+    left: 45px;
+    bottom: 340px;
+}
+
+#b6 {
+    left: 40px;
+    bottom: 250px;
+}
+
+#b7 {
+    left: 25px;
+    bottom: 290px;
+}
+
+#b8 {
+    left: 35px;
+    bottom: 380px;
+}
+
+.containTimerBiere {
     position: absolute;
     left: 1px;
-    bottom:0;
+    bottom: 0;
     width: 65px;
     height: 100%;
-    border-radius:0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
     background: rgba(244, 248, 59, 0.53);
     transition: height 2s;
     z-index: 1;
 }
-.bulles{
+
+.bulles {
     fill: linear-gradient(0deg, #EBE676 0%, #EBE676 100%), #EBE676;
 }
+
 /* en cours de developpement ne pas toucher svp */
 
 .quiz1 {
@@ -358,19 +371,19 @@ backdrop-filter: blur(5.9px);
 .aboutPhotoHomea {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 35px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     font-size: 14px;
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.4rem;
 }
 
 .titleSaviezVous {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
 }
 
 .visible {
@@ -971,12 +984,13 @@ a {
     .numberQuestion {
         left: 1%
     }
-.bodyquiz{
-    position: relative;
-    margin-top: 2rem;
-    width: 100%;
-    /* background: white; */
-}
+
+    .bodyquiz {
+        position: relative;
+        margin-top: 2rem;
+        width: 100%;
+        /* background: white; */
+    }
 
     .bodyquiz button {
         width: 90%;
@@ -1152,5 +1166,5 @@ a {
         grid-column: 1 / span 2;
         height: 60px;
     }
-   
+
 }
