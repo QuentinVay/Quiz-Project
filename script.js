@@ -22,7 +22,7 @@ let nombrepoints = 0;
 let nameUser;
 let progressBar;
 let buttonsEnable;
-let endQuiz = false
+let endQuiz = false;
 let tempTimeProgress;
 
 function initialisationQuiz() {
@@ -31,7 +31,7 @@ function initialisationQuiz() {
   compteur = 0;
   index = 0;
   nombrepoints = 0;
-  endQuiz = false
+  endQuiz = false;
   affichageRank.style.display = "none";
   imgTrophy.style.display = "none";
   imgShame.style.display = "none";
@@ -65,11 +65,13 @@ function showRank() {
   if (nombrepoints >= 100) {
     // Cas où nombrepoints est supérieur ou égal à 100 (team chocolatine)
     affichageScoreRank.innerHTML = `<p>Félicitations ${nameUser} tu fais partie de la team chocolatine! ton score est de :${nombrepoints}</p>`;
+    rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
     imgTrophy.style.display = "block";
   } else {
     // Cas où nombrepoints est inférieur à 100 (team pain au chocolat)
     tempsTimer = 60;
     affichageScoreRank.innerHTML = `<p>Désolé ${nameUser} tu fais partie de la team pain au chocolat! ton score est de :${nombrepoints}</p>`;
+    rankFourElement.textContent = `${pseudoInput.value}: ${nombrepoints}pts`;
     imgShame.style.display = "block";
 
   }
@@ -128,8 +130,8 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact, imgQ) {
   // const elementDelete = document.getElementById(`blockBiereId${compteur}`);
   const animationQuiz = document.getElementById(compteur);
   detectWindowSize(showProgressBar);
-  
-
+  endQuiz = true;
+  console.log(endQuiz);
   if (compteur > 0) {
     animationQuiz.classList.toggle("slidequiz");
   }
@@ -137,17 +139,9 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact, imgQ) {
 
   const element = document.getElementById(`${index}`);
 
-  if (!endQuiz) {
-    const elementRect = element.getBoundingClientRect();
-    const bodyRect = document.body.getBoundingClientRect();
-    const scrollTop = elementRect.top - bodyRect.top;
-  
-    window.scrollTo({
-      top: scrollTop,
-      behavior: "smooth"
-    });
+  if (endQuiz) {
+    element.scrollIntoView();
   }
-  
   
   // addEventListener sur chaque button de réponse
   const verificationAnswer = document.getElementsByClassName(`answerChoice${index}`);
@@ -185,18 +179,17 @@ function disableButtons(buttons) {
     button.style.pointerEvents = 'none';
   });
 }
-function detectWindowSize(element){
+function detectWindowSize(document){
   
   if (window.innerWidth <= 1280) {
     // Le viewport a une largeur de 768 pixels ou moins, donc nous considérons que c'est un appareil mobile
-    element.style.display='block';
+    document.style.display='block';
     asideTimer.style.display='none';
   } else {
     // Le viewport a une largeur supérieure à 768 pixels, donc nous considérons que c'est un ordinateur de bureau
     asideTimer.style.display='block';
-    element.style.display='none';
+    document.style.display='none';
   }
-  
 }
 
 function startChronometre(temps, buttons) {
@@ -229,7 +222,6 @@ function startChronometre(temps, buttons) {
 }
 
 let borderValue = 0; 
-
 
 // Fonction pour mettre à jour le borderTop
 function updateBorderTop(temps) {
@@ -390,7 +382,8 @@ window.addEventListener("load", ajusterBottomAside);
 // Appelez la fonction également lors du redimensionnement de la fenêtre
 window.addEventListener("resize", ajusterBottomAside);
 
-console.log(tempTimeProgress);
-window.addEventListener("resize",()=>{
+window.addEventListener("resize",() => {
+  if (endQuiz) {
   detectWindowSize(tempTimeProgress) ;
+  }
 } );
