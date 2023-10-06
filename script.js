@@ -4,7 +4,7 @@ const affichageRank = document.getElementById('rankSelection');
 const affichageScoreRank = document.querySelector('.detailsRankUserName');
 
 const asideTimer = document.querySelector('aside');
-let progressBarBiere= document.querySelector('.containTimerBiere');
+let progressBarBiere = document.querySelector('.containTimerBiere');
 
 
 const bodySectionQuiz = document.querySelector("main");
@@ -35,9 +35,9 @@ function initialisationQuiz() {
   affichageRank.style.display = "none";
   imgTrophy.style.display = "none";
   imgShame.style.display = "none";
-  asideTimer.style.display='none';
+  asideTimer.style.display = 'none';
   progressBarBiere.style.height = '100%';
-  progressBarBiere.style.borderTop='0';
+  progressBarBiere.style.borderTop = '0';
 }
 
 startQuiz.addEventListener('click', () => {
@@ -124,7 +124,7 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact, imgQ) {
   progressBar = document.getElementById(`idBarProgress${index}`);
 
   const showProgressBar = document.getElementById(`barTimeId${index}`);
-  tempTimeProgress=showProgressBar;
+  tempTimeProgress = showProgressBar;
   // const elementDelete = document.getElementById(`blockBiereId${compteur}`);
   const animationQuiz = document.getElementById(compteur);
   detectWindowSize(showProgressBar);
@@ -140,14 +140,14 @@ function generateRandomAnswer(quention, choices, correctAnswer, fact, imgQ) {
     const elementRect = element.getBoundingClientRect();
     const bodyRect = document.body.getBoundingClientRect();
     const scrollTop = elementRect.top - bodyRect.top;
-  
+
     window.scrollTo({
       top: scrollTop,
       behavior: "smooth"
     });
   }
-  
-  
+
+
   // addEventListener sur chaque button de réponse
   const verificationAnswer = document.getElementsByClassName(`answerChoice${index}`);
   const arrayAnswerButton = Array.from(verificationAnswer);
@@ -184,18 +184,18 @@ function disableButtons(buttons) {
     button.style.pointerEvents = 'none';
   });
 }
-function detectWindowSize(element){
-  
+function detectWindowSize(element) {
+
   if (window.innerWidth <= 1280) {
     // Le viewport a une largeur de 768 pixels ou moins, donc nous considérons que c'est un appareil mobile
-    element.style.display='block';
-    asideTimer.style.display='none';
+    element.style.display = 'block';
+    asideTimer.style.display = 'none';
   } else {
     // Le viewport a une largeur supérieure à 768 pixels, donc nous considérons que c'est un ordinateur de bureau
-    asideTimer.style.display='block';
-    element.style.display='none';
+    asideTimer.style.display = 'block';
+    element.style.display = 'none';
   }
-  
+
 }
 
 function startChronometre(temps, buttons) {
@@ -205,7 +205,7 @@ function startChronometre(temps, buttons) {
     tempsRestant--;
     console.log(temps);
     updateBorderTop(temps);
-    
+
     if (temps <= 0) {
       clearInterval(timeprogress);
       clearInterval(timeoutId);
@@ -215,7 +215,7 @@ function startChronometre(temps, buttons) {
       disableButtons(buttons); // Désactiver les boutons lorsque le temps est écoulé
     }
   }, 1000);
-  
+
   const timeoutId = setTimeout(() => {
     clearInterval(timeprogress);
     console.log('timeout settimeout');
@@ -223,11 +223,11 @@ function startChronometre(temps, buttons) {
     tempsTimer = 0;
     disableButtons(buttons); // Désactiver les boutons lorsque le temps est écoulé
   }, 10000 * temps);
-  
+
   return temps;
 }
 
-let borderValue = 0; 
+let borderValue = 0;
 
 
 // Fonction pour mettre à jour le borderTop
@@ -235,10 +235,10 @@ function updateBorderTop(temps) {
   // Mettez à jour la largeur de la barre de progression en fonction du temps restant
   const progressWidth = 99 - (temps / 60) * 99; // 60 est la durée totale en secondes
   progressBar.style.width = progressWidth + '%';
-  
+
   const progressWidthBiere = (temps / 60) * 448; // 60 est la durée totale en secondes
   progressBarBiere.style.height = progressWidthBiere + 'px';
-  
+
   borderValue += 0.5; // Augmentez la valeur de 0.5px
   progressBarBiere.style.borderTop = borderValue + "px solid whitesmoke";
 
@@ -254,7 +254,7 @@ function faireDisparaitreBulle(bulleId, delai) {
     }
   }, delai);
 }
-function resetBulle(){
+function resetBulle() {
   // Utilisation de la fonction pour faire disparaître les bulles à des intervalles différents
   faireDisparaitreBulle("b1", 43000); // Disparition de la bulle b1 après 2 secondes (2000 ms)
   faireDisparaitreBulle("b2", 51000); // Disparition de la bulle b2 après 3 secondes (3000 ms)
@@ -272,59 +272,59 @@ let tableauCopie = [];
 function selectquestionquiz(tableauquestion) {
   // Créer une copie du tableau d'origine
   tableauCopie = [...tableauquestion];
-  
+
   // Vérifier si le tableau copié est vide
   if (tableauCopie.length === 0) {
     // Retourner quelque chose pour indiquer que le tableau est vide (par exemple, null)
     return null;
   }
-  
+
   let randomIndex = Math.floor(Math.random() * tableauCopie.length);
   const { question, choices, correctAnswer, fact, imgQ } =
     tableauquestion[randomIndex];
-    
-    // Supprimer la question de la copie du tableau afin de ne pas la répéter
-    tableauCopie.splice(randomIndex, 1);
-    
-    // Afficher la question, stocker la bonne réponse dans une variable
-    return generateRandomAnswer(question, choices, correctAnswer, fact, imgQ);
-  }
-  
-  let aboutQ = document.querySelector('.aboutPhotoHome');
-  const aboutLq = document.querySelector('.aboutPhotoHomea');
-  
-  aboutQ.addEventListener('click', function () {
-    aboutLq.classList.toggle("visible")
-  })
-  
-  let navbarH = document.querySelector('.navBarFloatting');
-  const NavbarNotH = document.querySelector('.navBarHidden');
-  let burgerM = document.querySelector('.burgermenu')
-  
-  navbarH.addEventListener('click', function () {
-    NavbarNotH.classList.toggle("visible"),
+
+  // Supprimer la question de la copie du tableau afin de ne pas la répéter
+  tableauCopie.splice(randomIndex, 1);
+
+  // Afficher la question, stocker la bonne réponse dans une variable
+  return generateRandomAnswer(question, choices, correctAnswer, fact, imgQ);
+}
+
+let aboutQ = document.querySelector('.aboutPhotoHome');
+const aboutLq = document.querySelector('.aboutPhotoHomea');
+
+aboutQ.addEventListener('click', function () {
+  aboutLq.classList.toggle("visible")
+})
+
+let navbarH = document.querySelector('.navBarFloatting');
+const NavbarNotH = document.querySelector('.navBarHidden');
+let burgerM = document.querySelector('.burgermenu')
+
+navbarH.addEventListener('click', function () {
+  NavbarNotH.classList.toggle("visible"),
     burgerM.classList.toggle('tester')
-  })
-  
-  const playAgainButton = document.getElementById("playAgainButton");
-  const bodyHome = document.querySelector(".home");
-  
-  playAgainButton.addEventListener("click", function () {
-    // Affichez la section quiz quand on clique sur "retente ta chance".
-    console.log('click');
-    initialisationQuiz();
-    bodyHome.scrollIntoView();
-  });
-  const playAgainButtonDesktop = document.getElementById("playAgainButtonDesktop");
-  
-  playAgainButtonDesktop.addEventListener("click", function () {
-    // Affichez la section quiz quand on clique sur "retente ta chance".
-    console.log('click');
-    initialisationQuiz();
-    bodyHome.scrollIntoView();
-  });
-  
-  const rankFourElement = document.querySelector(".rankFour");
+})
+
+const playAgainButton = document.getElementById("playAgainButton");
+const bodyHome = document.querySelector(".home");
+
+playAgainButton.addEventListener("click", function () {
+  // Affichez la section quiz quand on clique sur "retente ta chance".
+  console.log('click');
+  initialisationQuiz();
+  bodyHome.scrollIntoView();
+});
+const playAgainButtonDesktop = document.getElementById("playAgainButtonDesktop");
+
+playAgainButtonDesktop.addEventListener("click", function () {
+  // Affichez la section quiz quand on clique sur "retente ta chance".
+  console.log('click');
+  initialisationQuiz();
+  bodyHome.scrollIntoView();
+});
+
+const rankFourElement = document.querySelector(".rankFour");
 const pseudoInput = document.getElementById("pseudo");
 
 pseudoInput.addEventListener("input", function () {
@@ -347,9 +347,9 @@ function toggleSendButtonState() {
     firstNameInput.value.trim() !== "" &&
     lastNameInput.value.trim() !== "" &&
     messageInput.value.trim() !== ""
-    ) {
-      sendButton.disabled = false; // Activer le bouton "Envoyer" si tous les champs sont remplis
-    } else {
+  ) {
+    sendButton.disabled = false; // Activer le bouton "Envoyer" si tous les champs sont remplis
+  } else {
     sendButton.disabled = true; // Désactiver le bouton "Envoyer" si un champ est vide
   }
 }
@@ -360,7 +360,7 @@ sendButton.disabled = true;
 if (nombrepoints < 70) {
   const rankFour = document.querySelector(".rankFour");
   const rankFive = document.querySelector(".rankFive");
-  
+
   // Insérez .rankFive avant .rankFour pour les échanger de place
   rankFour.parentNode.insertBefore(rankFive, rankFour);
 }
@@ -372,13 +372,13 @@ function ajusterBottomAside() {
   if (mainAfter && aside) {
     // Obtenez la hauteur de main::after
     const mainAfterHeight = mainAfter.clientHeight;
-    
+
     // Mettez à jour la variable CSS avec la hauteur
     document.documentElement.style.setProperty("--main-after-height", `${mainAfterHeight}px`);
-    
+
     // Ajouter cette hauteur à la valeur actuelle de bottom de aside
     const asideBottom = 50 + mainAfterHeight;
-    
+
     // Appliquer la nouvelle valeur à la propriété "bottom" de aside
     aside.style.bottom = `${asideBottom}px`;
   }
@@ -391,6 +391,7 @@ window.addEventListener("load", ajusterBottomAside);
 window.addEventListener("resize", ajusterBottomAside);
 
 console.log(tempTimeProgress);
+
 window.addEventListener("resize",()=>{
   detectWindowSize(tempTimeProgress) ;
 } );
