@@ -830,6 +830,7 @@ a {
         margin-left: 0px;
         padding-inline: 25%;
         padding-block: 8px;
+        font-size: 22px;
     }
 
     .burgermenu {
@@ -1007,7 +1008,7 @@ a {
     .rankOne,
     .rankTwo,
     .rankThree,
-    .rankFourFix, 
+    .rankFourFix,
     .rankFour {
         height: 20%;
     }
