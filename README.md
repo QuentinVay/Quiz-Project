@@ -1,6 +1,52 @@
-# Quiz-Project
-Pour les photos on peut mettre le lien url à la place de télécharger directement les photos.
-Mon push a durée 35s, les photo sont lourde faudra voir.
-je viens de penser, si les photo sont de trop bonne qualité sa va pas ramer a l'affichage?
-Pensez à pull avant de commencer à travailler sur le projet
-Teste
+# ChocoQuiz de Toulouse
+
+![ChocoQuiz de Toulouse Logo](./images/Home/Logo.png)
+
+## Introduction
+
+Welcome to ChocoQuiz de Toulouse, a project created by Quentin Vayssières, Marcelo Romero, and Adrien Manente. The purpose of this project was to create an interactive quiz on a website using HTML, CSS, and vanilla JavaScript. The project was completed in a duration of 3 weeks.
+
+## Features
+
+- Interactive quiz with a variety of questions.
+- 60-second timer for answering each question.
+- Score awarded based on correct answers.
+- Leaderboard displaying the top-scoring players.
+- Ability to share the quiz with your friends on social media.
+
+## Installation
+
+To use this project locally, follow these steps:
+
+1. Clone this Git repository to your machine:
+git clone https://github.com/YourName/ChocoQuiz-Toulouse.git
+2. Navigate to the project directory:
+cd ChocoQuiz-Toulouse
+3. Install the dependencies by running:
+npm install
+4. Validate the HTML code by running:
+npm run validate
+
+5. Open the "index.html" file in your browser to start the quiz.
+
+## Project Structure
+
+- HTML code is located in the "index.html" file.
+- CSS styles are defined in "style.css".
+- JavaScript logic is handled by "script.js".
+- Images and other resources are stored in the "images" folder.
+
+## Usage
+
+1. Enter a username and click "Start the Quiz!!" to begin the game.
+2. Answer the questions within a 60-second time limit.
+3. Your score is calculated based on correct answers.
+4. At the end of the quiz, you can share your score on social media and view your ranking.
+
+## About the Project
+
+This project was created by Quentin Vayssières, Marcelo Romero, and Adrien Manente. It demonstrates what can be accomplished in three weeks using standard web technologies (HTML, CSS, JavaScript). The code adheres to quality standards through the use of Husky to check HTML code quality with the W3C validator.
+
+Feel free to explore this project and use it as a reference for your own projects or as a learning resource. If you have any questions or need assistance, don't hesitate to contact the project's authors.
+
+Enjoy your experience with ChocoQuiz de Toulouse!
