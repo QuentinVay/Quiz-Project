@@ -1,18 +1,15 @@
-# ChocoQuiz de Toulouse
-
-![ChocoQuiz de Toulouse Logo](./images/Home/Logo.png)
+# ChocoQuiz
 
 ## Introduction
 
-Welcome to ChocoQuiz de Toulouse, a project created by Quentin Vayssières, Marcelo Romero, and Adrien Manente. The purpose of this project was to create an interactive quiz on a website using HTML, CSS, and vanilla JavaScript. The project was completed in a duration of 3 weeks.
+Welcome to ChocoQuiz project. The purpose of this project was to create an interactive quiz on a website using HTML, CSS, and vanilla JavaScript. The project was completed in a duration of 3 weeks.
 
 ## Features
 
-- Interactive quiz with a variety of questions.
+- Interactive quiz of Toulouse with a variety of questions.
 - 60-second timer for answering each question.
 - Score awarded based on correct answers.
 - Leaderboard displaying the top-scoring players.
-- Ability to share the quiz with your friends on social media.
 
 ## Installation
 
@@ -45,8 +42,8 @@ npm run validate
 
 ## About the Project
 
-This project was created by Quentin Vayssières, Marcelo Romero, and Adrien Manente. It demonstrates what can be accomplished in three weeks using standard web technologies (HTML, CSS, JavaScript). The code adheres to quality standards through the use of Husky to check HTML code quality with the W3C validator.
+This project was created by Quentin Vayssières, Marcelo Romero, and Adrien Manente. It showcases what can be achieved in three weeks using standard web technologies (HTML, CSS, JavaScript) after a month of training at the Wild Code School.
 
 Feel free to explore this project and use it as a reference for your own projects or as a learning resource. If you have any questions or need assistance, don't hesitate to contact the project's authors.
 
-Enjoy your experience with ChocoQuiz de Toulouse!
+Enjoy your experience with ChocoQuiz
